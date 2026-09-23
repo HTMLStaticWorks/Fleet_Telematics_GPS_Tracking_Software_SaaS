@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FleetX — Fleet Telematics & GPS Tracking Software</title>
+    <meta name="description"
+        content="FleetX is a modern fleet telematics and GPS tracking SaaS platform for real-time vehicle tracking, driver behavior, fuel analytics, maintenance, alerts and geofencing.">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23086cff'/%3E%3Cstop offset='1' stop-color='%2305d7ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Cpath d='M20 57h20a6 6 0 0 0 0-12h-8a6 6 0 0 1 0-12h12' fill='none' stroke='white' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M20 57c0 0-8-12-8-18a8 8 0 1 1 16 0c0 6-8 18-8 18zm0-22a4 4 0 1 0 0 8 4 4 0 1 0 0-8z' fill='white' fill-rule='evenodd'/%3E%3Cpath d='M44 33c0 0-8-12-8-18a8 8 0 1 1 16 0c0 6-8 18-8 18zm0-22a4 4 0 1 0 0 8 4 4 0 1 0 0-8z' fill='white' fill-rule='evenodd'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <!-- =========================================================
+NAVBAR
+========================================================= -->
+    <nav class="navbar" id="mainNav">
+        <div class="container nav-inner">
+            <div class="logo" onclick="showPage('home1')">
+                <span class="logo-mark">
+                    <i class="fa-solid fa-route"></i>
+                </span>
+                FleetX
+            </div>
+            <div class="nav-links">
+                <div class="nav-dropdown">
+                    <button class="nav-link active">
+                        Home <i class="fa-solid fa-chevron-down" style="margin-left: 5px; font-size: 12px;"></i>
+                    </button>
+                    <div class="nav-dropdown-menu">
+                        <button class="nav-dropdown-item" onclick="showPage('home1')">Home 1</button>
+                        <button class="nav-dropdown-item active" onclick="showPage('home2')">Home 2</button>
+                    </div>
+                </div>
+                <button class="nav-link" data-page="about" onclick="showPage('about')">
+                    About
+                </button>
+                <button class="nav-link" data-page="services" onclick="showPage('services')">
+                    Services
+                </button>
+                <button class="nav-link" data-page="features" onclick="showPage('features')">
+                    Features
+                </button>
+                <button class="nav-link" data-page="industries" onclick="showPage('industries')">
+                    Industries
+                </button>
+                <button class="nav-link" data-page="pricing" onclick="showPage('pricing')">
+                    Pricing
+                </button>
+                <button class="nav-link" data-page="contact" onclick="showPage('contact')">
+                    Contact
+                </button>
+                <button class="nav-link" data-page="dashboard" onclick="showPage('dashboard')">
+                    Dashboard
+                </button>
+            </div>
+            <div class="nav-controls">
+                <button class="icon-btn rtl-control" onclick="toggleRTL()" title="RTL" aria-label="Toggle RTL">
+                    <i class="fa-solid fa-right-left"></i>
+                </button>
+                <button class="icon-btn theme-control" onclick="toggleTheme()" title="Theme" aria-label="Toggle theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="btn btn-primary login-nav" onclick="showPage('login')">
+                    <i class="fa-solid fa-right-to-bracket"></i>
+                    Login
+                </button>
+                <button class="icon-btn hamburger" id="hamburgerBtn" onclick="toggleMobileMenu()"
+                    aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="container mobile-menu-grid">
+                <button onclick="showPage('home1');closeMobile()">Home 1</button>
+                <button class="active" onclick="showPage('home2');closeMobile()">Home 2</button>
+                <button onclick="showPage('about');closeMobile()">About</button>
+                <button onclick="showPage('services');closeMobile()">Services</button>
+                <button onclick="showPage('features');closeMobile()">Features</button>
+                <button onclick="showPage('industries');closeMobile()">Industries</button>
+                <button onclick="showPage('pricing');closeMobile()">Pricing</button>
+                <button onclick="showPage('contact');closeMobile()">Contact</button>
+                <button onclick="showPage('dashboard');closeMobile()">Dashboard</button>
+                <div class="mobile-nav-controls"
+                    style="display:flex; flex-direction:column; gap:10px; margin-top:15px; border-top:1px solid var(--border); padding-top:15px;">
+                    <div style="display:flex; gap:10px;">
+                        <button class="icon-btn rtl-control" onclick="toggleRTL();closeMobile()" title="RTL"
+                            aria-label="Toggle RTL" style="flex:1; height:42px;">
+                            <i class="fa-solid fa-right-left"></i>
+                        </button>
+                        <button class="icon-btn theme-control" onclick="toggleTheme();closeMobile()" title="Theme"
+                            aria-label="Toggle theme" style="flex:1; height:42px;">
+                            <i class="fa-solid fa-moon"></i>
+                        </button>
+                    </div>
+                    <button class="btn btn-primary" onclick="showPage('login');closeMobile()"
+                        style="width:100%; justify-content:center; padding:0 20px; height:42px;">
+                        <i class="fa-solid fa-right-to-bracket"></i> Login
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- =========================================================
+HOME 2 / PLATFORM
+========================================================= -->
+    <main id="home2" class="page active">
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-copy" style="margin-left: 40px;">
+                    <span class="eyebrow">
+                        Connected Fleet Operations
+                    </span>
+                    <h1>
+                        Your fleet data.
+                        <br>
+                        <span>Finally connected.</span>
+                    </h1>
+                    <p>
+                        Bring vehicle tracking, route intelligence, driver behavior,
+                        fuel analytics and maintenance into one modern workspace for
+                        fleet operations.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="showPage('contact')">
+                            Get Started
+                        </button>
+                        <button class="btn btn-outline" onclick="showPage('features')">
+                            Explore Platform
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-visual-wrapper" style="display:flex; flex-direction:column; gap:24px; width:100%;">
+                    <div class="platform-hero-visual" style="background: url('images/home2-hero.png') center/cover no-repeat; min-height: 550px;">
+                        <div class="platform-hero-overlay"></div>
+                        <div class="hero-glass one">
+                            <span class="glass-small">ACTIVE ROUTES</span>
+                            <span class="glass-value">86</span>
+                        </div>
+                        <div class="hero-glass two">
+                            <span class="glass-small">ALERT RESPONSE</span>
+                            <span class="glass-value">94%</span>
+                        </div>
+                    </div>
+                    <div class="telemetry-panel">
+                        <div class="telemetry-row">
+                            <div>
+                                <div class="telemetry-title">Live fleet telemetry</div>
+                                <div class="telemetry-value">1,284 vehicles connected</div>
+                            </div>
+                            <div class="command-live"><i></i> LIVE</div>
+                        </div>
+                        <div class="telemetry-bars" aria-hidden="true">
+                            <i style="height:42%"></i><i style="height:64%"></i><i style="height:51%"></i><i
+                                style="height:78%"></i><i style="height:57%"></i><i style="height:88%"></i><i
+                                style="height:69%"></i><i style="height:94%"></i><i style="height:73%"></i><i
+                                style="height:83%"></i><i style="height:61%"></i><i style="height:91%"></i><i
+                                style="height:76%"></i><i style="height:97%"></i><i style="height:70%"></i><i
+                                style="height:86%"></i><i style="height:66%"></i><i style="height:92%"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="info-band">
+                    <div class="info-box" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <img src="images/Collect.png" alt="Collect" style="width: 100%; height: 180px; object-fit: cover; display: block; border-bottom: 1px solid var(--border);">
+                        <div style="padding: 30px; flex: 1;">
+                            <div class="info-number">01</div>
+                            <h3>Collect</h3>
+                            <p>Bring vehicle location and operational signals into a central fleet workspace.</p>
+                        </div>
+                    </div>
+                    <div class="info-box" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <img src="images/Understand.png" alt="Understand" style="width: 100%; height: 180px; object-fit: cover; display: block; border-bottom: 1px solid var(--border);">
+                        <div style="padding: 30px; flex: 1;">
+                            <div class="info-number">02</div>
+                            <h3>Understand</h3>
+                            <p>Turn raw telematics data into route, safety, fuel and maintenance insights.</p>
+                        </div>
+                    </div>
+                    <div class="info-box" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <img src="images/Act.png" alt="Act" style="width: 100%; height: 180px; object-fit: cover; display: block; border-bottom: 1px solid var(--border);">
+                        <div style="padding: 30px; flex: 1;">
+                            <div class="info-number">03</div>
+                            <h3>Act</h3>
+                            <p>Use alerts, workflows and dashboards to respond to important fleet events.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="grid-2">
+                    <div class="split">
+                        <span class="eyebrow">
+                            Route Intelligence
+                        </span>
+                        <h2>
+                            See route performance instead of guessing.
+                        </h2>
+                        <p>
+                            Understand journey duration, stops, deviations and vehicle progress.
+                            Historical journey data gives operations teams a way to investigate
+                            what happened on a route and compare actual movement with expected
+                            operations.
+                        </p>
+                        <ul class="check-list">
+                            <li><i class="fa-solid fa-circle-check"></i> Route playback</li>
+                            <li><i class="fa-solid fa-circle-check"></i> ETA visibility</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Route deviation alerts</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Stop analysis</li>
+                        </ul>
+                    </div>
+                    <div class="big-image">
+                        <img src="images/See route performance instead of guessing.png"
+                            alt="Fleet vehicle route operations" loading="lazy" decoding="async">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="section-title">
+                    <span class="eyebrow">
+                        Live Fleet Intelligence
+                    </span>
+                    <h2>
+                        Watch fleet activity move from data to action.
+                    </h2>
+                    <p>
+                        A live operational view combines route movement, vehicle events, response activity and fleet
+                        health in one animated workspace.
+                    </p>
+                </div>
+                <div class="platform-command">
+                    <div class="command-head">
+                        <div>
+                            <div class="command-kicker">Operational signal flow</div>
+                            <h3>Fleet activity over the last 24 hours</h3>
+                            <p>Illustrative telemetry view for routes, alerts and operational response.</p>
+                        </div>
+                        <div class="command-live"><i></i> DATA STREAMING</div>
+                    </div>
+                    <div class="command-chart-wrap">
+                        <div class="command-chart-grid"></div>
+                        <svg class="command-chart-svg" viewBox="0 0 900 250" role="img"
+                            aria-label="Animated fleet activity line graph">
+                            <defs>
+                                <linearGradient id="fleetAreaGradient" x1="0" x2="0" y1="0" y2="1">
+                                    <stop offset="0%" stop-color="#22d3ee" stop-opacity=".42" />
+                                    <stop offset="100%" stop-color="#1677ff" stop-opacity="0" />
+                                </linearGradient>
+                            </defs>
+                            <path class="command-area"
+                                d="M0 208 C65 190 86 172 145 183 S220 118 286 143 S362 87 420 120 S493 145 548 93 S625 70 684 104 S760 48 820 82 S866 50 900 64 L900 250 L0 250 Z">
+                            </path>
+                            <path class="command-route"
+                                d="M0 208 C65 190 86 172 145 183 S220 118 286 143 S362 87 420 120 S493 145 548 93 S625 70 684 104 S760 48 820 82 S866 50 900 64">
+                            </path>
+                            <path class="command-route-2"
+                                d="M0 225 C90 211 110 195 170 201 S250 159 310 171 S390 131 455 151 S520 128 585 142 S655 92 725 123 S800 92 900 105">
+                            </path>
+                            <circle class="command-node" cx="145" cy="183" r="5"></circle>
+                            <circle class="command-node" cx="286" cy="143" r="5"></circle>
+                            <circle class="command-node" cx="548" cy="93" r="5"></circle>
+                            <circle class="command-node" cx="820" cy="82" r="5"></circle>
+                            <!-- Animated Truck -->
+                            <g>
+                                <animateMotion dur="12s" repeatCount="indefinite"
+                                    path="M0 208 C65 190 86 172 145 183 S220 118 286 143 S362 87 420 120 S493 145 548 93 S625 70 684 104 S760 48 820 82 S866 50 900 64"
+                                    calcMode="linear" keyPoints="0;1;0" keyTimes="0;0.5;1" />
+                                <g>
+                                    <animateTransform attributeName="transform" type="scale" values="1 1; -1 1; 1 1"
+                                        keyTimes="0; 0.5; 1" calcMode="discrete" dur="12s" repeatCount="indefinite" />
+                                    <g transform="translate(-15, -12) scale(0.0468)">
+                                        <path fill="#10d7ff"
+                                            d="M48 0C21.5 0 0 21.5 0 48V368c0 26.5 21.5 48 48 48H64c0 53 43 96 96 96s96-43 96-96H384c0 53 43 96 96 96s96-43 96-96h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V288 256 237.3c0-17-6.7-33.3-18.7-45.3L512 114.7c-12-12-28.3-18.7-45.3-18.7H416V48c0-26.5-21.5-48-48-48H48zM416 160h50.7L544 237.3V256H416V160zM112 416a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm368-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z" />
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                        <div class="command-tooltip">
+                            <strong>94%</strong>
+                            <span>response visibility</span>
+                        </div>
+                        <div class="command-chart-labels">
+                            <span>00:00</span><span>06:00</span><span>12:00</span><span>18:00</span><span>Now</span>
+                        </div>
+                    </div>
+                    <div class="command-stats">
+                        <div class="command-stat"><span>Vehicles online</span><strong>1,284</strong><em>+8.4%</em></div>
+                        <div class="command-stat"><span>Active routes</span><strong>86</strong><em>LIVE</em></div>
+                        <div class="command-stat"><span>Open alerts</span><strong>17</strong><em>−12%</em></div>
+                        <div class="command-stat"><span>Fleet health</span><strong>97.6%</strong><em>STABLE</em></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="showcase">
+                    <div class="showcase-item">
+                        <img src="images/Dispatch Control.png"
+                            alt="Logistics warehouse" loading="lazy" decoding="async">
+                        <div class="showcase-overlay">
+                            <h3>Dispatch Control</h3>
+                        </div>
+                    </div>
+                    <div class="showcase-item">
+                        <img src="images/Delivery Visibility.png"
+                            alt="Distribution warehouse" loading="lazy" decoding="async">
+                        <div class="showcase-overlay">
+                            <h3>Delivery Visibility</h3>
+                        </div>
+                    </div>
+                    <div class="showcase-item">
+                        <img src="images/Asset Utilization.png"
+                            alt="Commercial vehicle" loading="lazy" decoding="async">
+                        <div class="showcase-overlay">
+                            <h3>Asset Utilization</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="grid-2">
+                    <div class="big-image">
+                        <img src="images/Exceptions should reach your team automatically.png"
+                            alt="Fleet operations team" loading="lazy" decoding="async">
+                    </div>
+                    <div class="split">
+                        <span class="eyebrow">
+                            Smart Alerts
+                        </span>
+                        <h2>
+                            Exceptions should reach your team automatically.
+                        </h2>
+                        <p>
+                            Instead of requiring managers to constantly watch every vehicle,
+                            FleetX can organize important events around configured rules.
+                            That makes it easier to focus attention where it is required.
+                        </p>
+                        <div class="grid-2" style="gap:9px;">
+                            <div class="feature-card">
+                                <div class="feature-icon"><i class="fa-solid fa-bell"></i></div>
+                                <h3>Instant</h3>
+                                <p>Surface important events quickly.</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon"><i class="fa-solid fa-sliders"></i></div>
+                                <h3>Flexible</h3>
+                                <p>Configure rules around your operation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="emoji-panel">
+                    <div class="emoji">🛰️</div>
+                    <h2>
+                        A connected command layer for modern fleets.
+                    </h2>
+                    <p style="max-width:650px;margin:9px auto 19px;color:var(--muted);font-size:12px;">
+                        GPS, vehicle events, driver activity and operational analytics come
+                        together in one continuously updated platform.
+                    </p>
+                    <button class="btn btn-primary" onclick="showPage('dashboard')"
+                        style="width: auto; padding: 0 28px; white-space: nowrap;">
+                        Open Fleet Dashboard
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- =========================================================
+FOOTER
+========================================================= -->
+    <footer class="footer" id="mainFooter">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="logo">
+                        <span class="logo-mark">
+                            <i class="fa-solid fa-route"></i>
+                        </span>
+                        FleetX
+                    </div>
+                    <p>
+                        FleetX is a modern fleet telematics SaaS concept <br>
+                        for GPS tracking, driver intelligence, fuel analytics, <br>
+                        maintenance, alerts and geofencing.
+                    </p>
+                    <div class="socials">
+                        <a href="#" class="social facebook" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social instagram" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social linkedin" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social youtube" aria-label="YouTube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Platform</h4>
+                    <div class="footer-links">
+                        <button onclick="showPage('home1')">Home</button>
+                        <button onclick="showPage('home2')">Platform</button>
+                        <button onclick="showPage('features')">Features</button>
+                        <button onclick="showPage('industries')">Industries</button>
+                        <button onclick="showPage('pricing')">Pricing</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Company</h4>
+                    <div class="footer-links">
+                        <button onclick="showPage('contact')">Contact</button>
+                        <button onclick="showPage('dashboard')">Dashboard</button>
+                        <button onclick="showPage('login')">Login</button>
+                        <button onclick="showPage('contact')">Request Demo</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Resources</h4>
+                    <div class="footer-links">
+                        <button onclick="showPage('home1')">Blog</button>
+                        <button onclick="showPage('home1')">Case Studies</button>
+                        <button onclick="showPage('home1')">Help Center</button>
+                        <button onclick="showPage('home1')">API Docs</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>
+                    © 2026 FleetX. All rights reserved.
+                </span>
+                <span>
+                    Fleet Telematics & GPS Tracking Software
+                </span>
+            </div>
+        </div>
+    </footer>
+    <button class="top-btn" id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

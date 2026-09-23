@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FleetX — Fleet Telematics & GPS Tracking Software</title>
+<meta name="description" content="FleetX is a modern fleet telematics and GPS tracking SaaS platform for real-time vehicle tracking, driver behavior, fuel analytics, maintenance, alerts and geofencing.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23086cff'/%3E%3Cstop offset='1' stop-color='%2305d7ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Cpath d='M20 57h20a6 6 0 0 0 0-12h-8a6 6 0 0 1 0-12h12' fill='none' stroke='white' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M20 57c0 0-8-12-8-18a8 8 0 1 1 16 0c0 6-8 18-8 18zm0-22a4 4 0 1 0 0 8 4 4 0 1 0 0-8z' fill='white' fill-rule='evenodd'/%3E%3Cpath d='M44 33c0 0-8-12-8-18a8 8 0 1 1 16 0c0 6-8 18-8 18zm0-22a4 4 0 1 0 0 8 4 4 0 1 0 0-8z' fill='white' fill-rule='evenodd'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<!-- =========================================================
+NAVBAR
+========================================================= -->
+<nav class="navbar" id="mainNav">
+<div class="container nav-inner">
+<div class="logo" onclick="showPage('home1')">
+<span class="logo-mark">
+<i class="fa-solid fa-route"></i>
+</span>
+FleetX
+</div>
+<div class="nav-links">
+<div class="nav-dropdown">
+<button class="nav-link">
+Home <i class="fa-solid fa-chevron-down" style="margin-left: 5px; font-size: 12px;"></i>
+</button>
+<div class="nav-dropdown-menu">
+<button class="nav-dropdown-item" onclick="showPage('home1')">Home 1</button>
+<button class="nav-dropdown-item" onclick="showPage('home2')">Home 2</button>
+</div>
+</div>
+<button class="nav-link" data-page="about" onclick="showPage('about')">
+About
+</button>
+<button class="nav-link" data-page="services" onclick="showPage('services')">
+Services
+</button>
+<button class="nav-link" data-page="features" onclick="showPage('features')">
+Features
+</button>
+<button class="nav-link" data-page="industries" onclick="showPage('industries')">
+Industries
+</button>
+<button class="nav-link" data-page="pricing" onclick="showPage('pricing')">
+Pricing
+</button>
+<button class="nav-link active" data-page="contact" onclick="showPage('contact')">
+Contact
+</button>
+<button class="nav-link" data-page="dashboard" onclick="showPage('dashboard')">
+Dashboard
+</button>
+</div>
+<div class="nav-controls">
+<button class="icon-btn rtl-control" onclick="toggleRTL()" title="RTL" aria-label="Toggle RTL">
+<i class="fa-solid fa-right-left"></i>
+</button>
+<button class="icon-btn theme-control" onclick="toggleTheme()" title="Theme" aria-label="Toggle theme">
+<i class="fa-solid fa-moon"></i>
+</button>
+<button class="btn btn-primary login-nav" onclick="showPage('login')">
+<i class="fa-solid fa-right-to-bracket"></i>
+Login
+</button>
+<button class="icon-btn hamburger" id="hamburgerBtn" onclick="toggleMobileMenu()" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+<i class="fa-solid fa-bars"></i>
+</button>
+</div>
+</div>
+<div class="mobile-menu" id="mobileMenu">
+<div class="container mobile-menu-grid">
+<button onclick="showPage('home1');closeMobile()">Home 1</button>
+<button onclick="showPage('home2');closeMobile()">Home 2</button>
+<button onclick="showPage('about');closeMobile()">About</button>
+<button onclick="showPage('services');closeMobile()">Services</button>
+<button onclick="showPage('features');closeMobile()">Features</button>
+<button onclick="showPage('industries');closeMobile()">Industries</button>
+<button onclick="showPage('pricing');closeMobile()">Pricing</button>
+<button class="active" onclick="showPage('contact');closeMobile()">Contact</button>
+<button onclick="showPage('dashboard');closeMobile()">Dashboard</button>
+<div class="mobile-nav-controls" style="display:flex; flex-direction:column; gap:10px; margin-top:15px; border-top:1px solid var(--border); padding-top:15px;">
+<div style="display:flex; gap:10px;">
+<button class="icon-btn rtl-control" onclick="toggleRTL();closeMobile()" title="RTL" aria-label="Toggle RTL" style="flex:1; height:42px;">
+<i class="fa-solid fa-right-left"></i>
+</button>
+<button class="icon-btn theme-control" onclick="toggleTheme();closeMobile()" title="Theme" aria-label="Toggle theme" style="flex:1; height:42px;">
+<i class="fa-solid fa-moon"></i>
+</button>
+</div>
+<button class="btn btn-primary" onclick="showPage('login');closeMobile()" style="width:100%; justify-content:center; padding:0 20px; height:42px;">
+<i class="fa-solid fa-right-to-bracket"></i> Login
+</button>
+</div>
+</div>
+</div>
+</nav>
+<!-- =========================================================
+CONTACT
+========================================================= -->
+<main id="contact" class="page active">
+<section class="hero" style="background: var(--navy);">
+<div class="container">
+<div class="hero-copy" style="text-align: center; max-width: 800px; margin: 0 auto;">
+<span class="eyebrow" style="color: #05d7ff; border-color: rgba(255,255,255,0.2); background: rgba(255,255,255,0.1);">
+Contact FleetX
+</span>
+<h1 style="color: #fff;">
+Let's make your fleet <span>more visible.</span>
+</h1>
+<p style="color: rgba(255,255,255,0.9);">
+Tell us about your vehicles, routes, fleet size and operational
+requirements. Our team can help demonstrate how FleetX could fit
+your fleet management workflow.
+</p>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="section-title">
+<span class="eyebrow">
+Let's Connect
+</span>
+<h2>
+Tell us what your fleet needs.
+</h2>
+<p>
+Share a few details and use the message field to describe your current
+fleet tracking, safety, fuel or maintenance challenges.
+</p>
+</div>
+<div class="contact-grid">
+<div class="contact-info">
+<div class="contact-item">
+<div class="contact-icon">📧</div>
+<div>
+<h4>Email</h4>
+<p>[hello@fleetx.example](mailto:hello@fleetx.example)</p>
+</div>
+</div>
+<div class="contact-item">
+<div class="contact-icon">📞</div>
+<div>
+<h4>Phone</h4>
+<p>+91 90000 12345</p>
+</div>
+</div>
+<div class="contact-item">
+<div class="contact-icon">📍</div>
+<div>
+<h4>Office</h4>
+<p>Hitech City, Hyderabad, Telangana, India</p>
+</div>
+</div>
+<div class="contact-item">
+<div class="contact-icon">🕘</div>
+<div>
+<h4>Business Hours</h4>
+<p>Monday – Saturday · 9:00 AM – 6:00 PM</p>
+</div>
+</div>
+<div class="contact-item">
+<div class="contact-icon">🚛</div>
+<div>
+<h4>Fleet Demo</h4>
+<p>Live tracking, driver scoring, fuel analytics and maintenance workflows.</p>
+</div>
+</div>
+</div>
+<div class="form-card">
+<h2 style="font-family:'Manrope';font-size:23px;">
+Tell us about your fleet
+</h2>
+<p style="font-size:10px;color:var(--muted);margin-bottom:18px;">
+A few details will help structure the right demo experience.
+</p>
+<form onsubmit="submitContact(event)">
+<div class="form-grid">
+<div class="form-group">
+<label>Full Name</label>
+<input class="form-control"
+type="text"
+placeholder="Your name"
+required>
+</div>
+<div class="form-group">
+<label>Work Email</label>
+<input class="form-control"
+type="email"
+placeholder="[name@company.com](mailto:name@company.com)"
+required>
+</div>
+<div class="form-group">
+<label>Phone</label>
+<input class="form-control"
+type="tel"
+placeholder="+91 90000 00000">
+</div>
+<div class="form-group">
+<label>Fleet Size</label>
+<select class="form-control">
+<option>1–25 vehicles</option>
+<option>26–100 vehicles</option>
+<option>101–500 vehicles</option>
+<option>501–1,000 vehicles</option>
+<option>1,000+ vehicles</option>
+</select>
+</div>
+<div class="form-group full">
+<label>Primary Requirement</label>
+<select class="form-control">
+<option>GPS Tracking</option>
+<option>Driver Behavior</option>
+<option>Fuel Analytics</option>
+<option>Maintenance</option>
+<option>Alerts & Geofencing</option>
+<option>Complete Fleet Platform</option>
+</select>
+</div>
+<div class="form-group full">
+<label>Message</label>
+<textarea class="form-control"
+placeholder="Tell us about your fleet and current challenges"></textarea>
+</div>
+<div class="form-group full">
+<button class="btn btn-primary" type="submit">
+Send Message
+</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243647.31604085444!2d78.26795843477103!3d17.41229980116669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78392bafbc2!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1709214472314!5m2!1sen!2sin" width="100%" height="400" style="border:0; border-radius: 21px; box-shadow: var(--shadow2);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="grid-2">
+<div class="split">
+<span class="eyebrow">
+Fleet Consultation
+</span>
+<h2>
+Start with the operational problem you want to solve.
+</h2>
+<p>
+FleetX can be demonstrated around the areas that matter most to
+your operation. That might be live vehicle visibility, driver safety,
+fuel consumption, maintenance scheduling, geofencing or alert management.
+</p>
+<p>
+Use the form above to describe your fleet environment and the
+workflow you would like to improve.
+</p>
+</div>
+<div class="big-image">
+<img
+src="images/Start with the operational problem you want to solve.png"
+alt="Start with the operational problem you want to solve"
+loading="lazy"
+decoding="async">
+</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container" style="max-width: 800px;">
+<div class="section-title" style="text-align: center; margin-bottom: 40px;">
+<h2>Frequently Asked Questions</h2>
+</div>
+<div class="faq-list">
+<details class="faq-item">
+<summary>What is included in the product demonstration? <i class="fa-solid fa-chevron-down"></i></summary>
+<div class="faq-content">Our product demonstration includes a full walkthrough of the FleetX platform tailored to your specific industry, an overview of hardware installation, and a Q&A session with our fleet experts.</div>
+</details>
+<details class="faq-item">
+<summary>How long does implementation take? <i class="fa-solid fa-chevron-down"></i></summary>
+<div class="faq-content">Most fleets can be fully onboarded within 2-4 weeks, depending on the size of your fleet and whether custom API integrations are required.</div>
+</details>
+<details class="faq-item">
+<summary>Do you offer custom pricing for large fleets? <i class="fa-solid fa-chevron-down"></i></summary>
+<div class="faq-content">Yes! For fleets with over 500 vehicles, we provide custom enterprise pricing tiers. Please reach out via the contact form above to get a tailored quote.</div>
+</details>
+<details class="faq-item">
+<summary>Can I integrate FleetX with my existing software? <i class="fa-solid fa-chevron-down"></i></summary>
+<div class="faq-content">Absolutely. FleetX offers a robust REST API and pre-built integrations with major ERP, payroll, and maintenance software systems.</div>
+</details>
+<details class="faq-item">
+<summary>What kind of support is available? <i class="fa-solid fa-chevron-down"></i></summary>
+<div class="faq-content">We provide 24/7 technical support for all our customers, along with dedicated account managers for enterprise tiers to ensure your fleet runs smoothly.</div>
+</details>
+</div>
+</div>
+</section>
+</main>
+<!-- =========================================================
+FOOTER
+========================================================= -->
+<footer class="footer" id="mainFooter">
+<div class="container">
+<div class="footer-grid">
+<div>
+<div class="logo">
+<span class="logo-mark">
+<i class="fa-solid fa-route"></i>
+</span>
+FleetX
+</div>
+<p>
+FleetX is a modern fleet telematics SaaS concept <br>
+for GPS tracking, driver intelligence, fuel analytics, <br>
+maintenance, alerts and geofencing.
+</p>
+<div class="socials">
+<a href="#" class="social facebook" aria-label="Facebook">
+<i class="fa-brands fa-facebook-f"></i>
+</a>
+<a href="#" class="social instagram" aria-label="Instagram">
+<i class="fa-brands fa-instagram"></i>
+</a>
+<a href="#" class="social linkedin" aria-label="LinkedIn">
+<i class="fa-brands fa-linkedin-in"></i>
+</a>
+<a href="#" class="social youtube" aria-label="YouTube">
+<i class="fa-brands fa-youtube"></i>
+</a>
+</div>
+</div>
+<div>
+<h4>Platform</h4>
+<div class="footer-links">
+<button onclick="showPage('home1')">Home</button>
+<button onclick="showPage('home2')">Platform</button>
+<button onclick="showPage('features')">Features</button>
+<button onclick="showPage('industries')">Industries</button>
+<button onclick="showPage('pricing')">Pricing</button>
+</div>
+</div>
+<div>
+<h4>Company</h4>
+<div class="footer-links">
+<button onclick="showPage('contact')">Contact</button>
+<button onclick="showPage('dashboard')">Dashboard</button>
+<button onclick="showPage('login')">Login</button>
+<button onclick="showPage('contact')">Request Demo</button>
+</div>
+</div>
+<div>
+<h4>Resources</h4>
+<div class="footer-links">
+<button onclick="showPage('home1')">Blog</button>
+<button onclick="showPage('home1')">Case Studies</button>
+<button onclick="showPage('home1')">Help Center</button>
+<button onclick="showPage('home1')">API Docs</button>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<span>
+© 2026 FleetX. All rights reserved.
+</span>
+<span>
+Fleet Telematics & GPS Tracking Software
+</span>
+</div>
+</div>
+</footer>
+<button class="top-btn" id="topBtn"
+onclick="window.scrollTo({top:0,behavior:'smooth'})">
+<i class="fa-solid fa-arrow-up"></i>
+</button>
+<script src="js/main.js"></script>
+</body>
+</html>
