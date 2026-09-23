@@ -903,6 +903,7 @@ border:1px solid var(--border);
 border-radius:21px;
 box-shadow:var(--shadow2);
 transition:.35s;
+text-align:center;
 }
 .price-card:hover{
 transform:translateY(-9px);
@@ -2114,13 +2115,14 @@ grid-template-columns:repeat(2,1fr);
 grid-template-columns:repeat(2,1fr);
 }
 }
-@media(max-width:900px){
-.hero-grid,
-.contact-grid{
+@media(max-width:1024px){
+.hero-grid{
 grid-template-columns:1fr;
 }
 .hero-copy{
 text-align:center;
+padding:0 20px;
+margin:0 auto !important;
 }
 .hero-copy p{
 margin-left:auto;
@@ -2128,6 +2130,11 @@ margin-right:auto;
 }
 .hero-buttons{
 justify-content:center;
+}
+}
+@media(max-width:900px){
+.contact-grid{
+grid-template-columns:1fr;
 }
 .grid-3,
 .pricing{
@@ -2215,7 +2222,8 @@ gap:10px;
 .pricing > *:nth-child(3):last-child,
 .info-band > *:nth-child(3):last-child,
 .showcase > *:nth-child(3):last-child{
-width:auto;
+width:100%;
+justify-self:stretch;
 }
 .section{
 padding:43px 0;
