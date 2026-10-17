@@ -115,9 +115,9 @@ NAVBAR
 HOME 2 / PLATFORM
 ========================================================= -->
     <main id="home2" class="page active">
-        <section class="hero">
+        <section class="hero hero-home2">
             <div class="container hero-grid">
-                <div class="hero-copy" style="margin-left: 40px;">
+                <div class="hero-copy">
                     <span class="eyebrow">
                         Connected Fleet Operations
                     </span>
@@ -232,7 +232,7 @@ HOME 2 / PLATFORM
                 </div>
             </div>
         </section>
-        <section class="section">
+        <section class="section section-alt" style="background: rgba(8,108,255,0.03);">
             <div class="container">
                 <div class="section-title">
                     <span class="eyebrow">
@@ -357,12 +357,12 @@ HOME 2 / PLATFORM
                             That makes it easier to focus attention where it is required.
                         </p>
                         <div class="grid-2" style="gap:9px;">
-                            <div class="feature-card">
+                            <div class="feature-card" style="text-align: center;">
                                 <div class="feature-icon"><i class="fa-solid fa-bell"></i></div>
                                 <h3>Instant</h3>
                                 <p>Surface important events quickly.</p>
                             </div>
-                            <div class="feature-card">
+                            <div class="feature-card" style="text-align: center;">
                                 <div class="feature-icon"><i class="fa-solid fa-sliders"></i></div>
                                 <h3>Flexible</h3>
                                 <p>Configure rules around your operation.</p>
@@ -372,21 +372,78 @@ HOME 2 / PLATFORM
                 </div>
             </div>
         </section>
+
+        <!-- PLATFORM ARCHITECTURE SECTION -->
+        <section class="section section-alt" style="background: rgba(8,108,255,0.03);">
+            <div class="container">
+                <div class="section-title">
+                    <span class="eyebrow">
+                        Platform Architecture
+                    </span>
+                    <h2>
+                        End-to-end data pipeline from vehicle to cloud.
+                    </h2>
+                    <p>
+                        High-throughput streaming telematics engineered for enterprise reliability and zero latency.
+                    </p>
+                </div>
+                <div class="pipeline-flow">
+                    <div class="pipeline-node">
+                        <div class="pipeline-node-top">
+                            <i class="fa-solid fa-satellite-dish"></i>
+                            <span class="pipeline-latency">Edge Node 01</span>
+                        </div>
+                        <h3>In-Vehicle IoT Sensors</h3>
+                        <p>Universal OBD-II, CAN-bus taps, dashcams, and wireless BLE probes collect high-frequency vehicle telemetry on every trip.</p>
+                    </div>
+                    <div class="pipeline-node">
+                        <div class="pipeline-node-top">
+                            <i class="fa-solid fa-microchip"></i>
+                            <span class="pipeline-latency">&lt;20ms Edge</span>
+                        </div>
+                        <h3>Edge Processing &amp; Buffering</h3>
+                        <p>On-device microcontrollers validate GPS telemetry, filter jitter, and buffer trip packets during cellular dead zones.</p>
+                    </div>
+                    <div class="pipeline-node">
+                        <div class="pipeline-node-top">
+                            <i class="fa-solid fa-brain"></i>
+                            <span class="pipeline-latency">&lt;50ms AI Stream</span>
+                        </div>
+                        <h3>Cloud Analytics &amp; AI</h3>
+                        <p>Distributed stream pipelines calculate driver risk scores, detect sudden fuel drops, and trigger geofence alerts instantaneously.</p>
+                    </div>
+                    <div class="pipeline-node">
+                        <div class="pipeline-node-top">
+                            <i class="fa-solid fa-desktop"></i>
+                            <span class="pipeline-latency">Real-time Push</span>
+                        </div>
+                        <h3>Operations Console &amp; APIs</h3>
+                        <p>Real-time updates delivered to dispatcher screens, driver mobile apps, and enterprise ERP/TMS platforms via WebSockets.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA SECTION -->
         <section class="section">
             <div class="container">
                 <div class="emoji-panel">
-                    <div class="emoji">🛰️</div>
+                    <div class="cta-icon-badge"><i class="fa-solid fa-satellite-dish"></i></div>
                     <h2>
                         A connected command layer for modern fleets.
                     </h2>
-                    <p style="max-width:650px;margin:9px auto 19px;color:var(--muted);font-size:12px;">
-                        GPS, vehicle events, driver activity and operational analytics come
-                        together in one continuously updated platform.
+                    <p>
+                        GPS tracking, vehicle events, driver scorecards, and fuel analytics come
+                        together in one continuously updated platform. Experience the difference today.
                     </p>
-                    <button class="btn btn-primary" onclick="showPage('dashboard')"
-                        style="width: auto; padding: 0 28px; white-space: nowrap;">
-                        Open Fleet Dashboard
-                    </button>
+                    <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
+                        <button class="btn btn-primary" onclick="showPage('dashboard')">
+                            <i class="fa-solid fa-chart-pie"></i> Open Fleet Dashboard
+                        </button>
+                        <button class="btn btn-outline" onclick="showPage('contact')">
+                            <i class="fa-solid fa-headset"></i> Talk to Our Team
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>

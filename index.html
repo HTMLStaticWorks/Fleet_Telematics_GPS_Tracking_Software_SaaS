@@ -105,7 +105,7 @@ Login
 HOME 1
 ========================================================= -->
 <main id="home1" class="page active">
-<section class="hero" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=2400&q=90') center/cover no-repeat;">
+<section class="hero hero-home1" style="background: linear-gradient(180deg, rgba(6, 18, 34, 0.42) 0%, rgba(3, 10, 20, 0.58) 100%), url('https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=2400&q=90') center/cover no-repeat;">
 <div class="container">
 <div class="hero-copy" style="text-align: center; max-width: 800px; margin: 0 auto;">
 <span class="eyebrow" style="color: #05d7ff; border-color: rgba(255,255,255,0.2); background: rgba(255,255,255,0.1);">
@@ -293,7 +293,7 @@ stops and exceptions without switching between disconnected systems.
 </div>
 </div>
 </section>
-<section class="section">
+<section class="section section-alt" style="background: rgba(8,108,255,0.03);">
 <div class="container">
 <div class="section-title">
 <span class="eyebrow">
@@ -378,7 +378,7 @@ decoding="async">
 </div>
 </div>
 </section>
-<section class="section">
+<section class="section section-alt" style="background: rgba(8,108,255,0.03);">
 <div class="container">
 <div class="grid-2">
 <div class="big-image">
@@ -409,6 +409,98 @@ vehicles operational with centralized fleet maintenance information.
 </div>
 </div>
 </section>
+
+<!-- HOW IT WORKS SECTION -->
+<section class="section section-alt" style="background: rgba(8,108,255,0.03);">
+<div class="container">
+<div class="section-title">
+<span class="eyebrow">Seamless Onboarding</span>
+<h2>How FleetX works in four straightforward steps.</h2>
+<p>
+Get your fleet operational in days, not months, with zero disruption to daily delivery schedules.
+</p>
+</div>
+<div class="process-timeline">
+<div class="timeline-card">
+<div class="timeline-card-top">
+<span class="timeline-number">01</span>
+<span class="timeline-icon-wrap"><i class="fa-solid fa-plug"></i></span>
+</div>
+<h3>Plug & Connect</h3>
+<p>Universal OBD-II or hardwired GPS trackers install in under 15 minutes per vehicle with certified zero-downtime support.</p>
+</div>
+<div class="timeline-card">
+<div class="timeline-card-top">
+<span class="timeline-number">02</span>
+<span class="timeline-icon-wrap"><i class="fa-solid fa-cloud-arrow-up"></i></span>
+</div>
+<h3>Real-Time Cloud Sync</h3>
+<p>Satellite location, fuel levels, engine codes, and geofence events stream directly to your secure web and mobile consoles.</p>
+</div>
+<div class="timeline-card">
+<div class="timeline-card-top">
+<span class="timeline-number">03</span>
+<span class="timeline-icon-wrap"><i class="fa-solid fa-gauge-high"></i></span>
+</div>
+<h3>Automate & Optimize</h3>
+<p>Receive instant exception alerts, enforce driver safety scorecards, and cut unnecessary fuel consumption by up to 22%.</p>
+</div>
+<div class="timeline-card">
+<div class="timeline-card-top">
+<span class="timeline-number">04</span>
+<span class="timeline-icon-wrap"><i class="fa-solid fa-network-wired"></i></span>
+</div>
+<h3>Scale Without Limits</h3>
+<p>Integrate telematics data seamlessly with your ERP, TMS, and payroll software via open REST APIs and webhooks.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- QUANTIFIABLE BUSINESS VALUE SECTION -->
+<section class="section">
+<div class="container">
+<div class="section-title">
+<span class="eyebrow">Proven Fleet ROI</span>
+<h2>Measurable operational impact across every route.</h2>
+<p>
+FleetX delivers compounding return on investment by eliminating waste, accidents, and administrative friction.
+</p>
+</div>
+<div class="roi-cockpit">
+<div class="roi-featured-card">
+<span class="roi-featured-badge"><i class="fa-solid fa-chart-line"></i> Primary Impact</span>
+<div class="roi-featured-metric">18% - 22%</div>
+<h3>Fuel Overhead Savings</h3>
+<p>Curb aggressive speeding, eliminate off-route detours, and dramatically decrease unnecessary engine idling across your entire fleet from month one.</p>
+</div>
+<div class="roi-rows">
+<div class="roi-row-card">
+<div class="roi-row-info">
+<h4>Fewer Safety Violations</h4>
+<p>Automated driver scorecards and in-cab coaching promote defensive driving habits and lower insurance claims.</p>
+</div>
+<span class="roi-row-pill">35% Drop</span>
+</div>
+<div class="roi-row-card">
+<div class="roi-row-info">
+<h4>Faster Dispatch Response</h4>
+<p>Dispatchers instantly identify the closest available vehicle and share live customer tracking links.</p>
+</div>
+<span class="roi-row-pill">42% Faster</span>
+</div>
+<div class="roi-row-card">
+<div class="roi-row-info">
+<h4>Guaranteed Telematics Uptime</h4>
+<p>Continuous GPS positioning, sub-second latency, and historical route replay keep operations teams always in command.</p>
+</div>
+<span class="roi-row-pill">99.8% SLA</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
 <section class="section">
 <div class="container">
 <div class="dark-section">
@@ -419,13 +511,16 @@ Fleet Command
 <h2>
 From GPS signals to operational decisions.
 </h2>
-<p style="color:#9db4ca;">
+<p style="color:#9db4ca; font-size: 16px; max-width: 650px; margin: 10px auto 20px;">
 FleetX connects location, driver behavior, fuel, maintenance and alerts
 into one continuously updated fleet intelligence layer.
 </p>
-<div class="hero-buttons" style="justify-content:center;margin-top:20px;">
+<div class="hero-buttons" style="justify-content:center; gap: 14px; margin-top:20px; flex-wrap: wrap;">
 <button class="btn btn-primary" onclick="showPage('contact')">
-Talk to FleetX
+<i class="fa-solid fa-headset"></i> Talk to FleetX Specialist
+</button>
+<button class="btn btn-outline" onclick="showPage('features')" style="background: rgba(255,255,255,0.1); color: #fff; border-color: rgba(255,255,255,0.25);">
+<i class="fa-solid fa-list-check"></i> Explore All Features
 </button>
 </div>
 </div>

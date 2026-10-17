@@ -106,141 +106,287 @@ Login
 SERVICES
 ========================================================= -->
 <main id="services" class="page active">
-<section class="hero" style="background: var(--navy);">
+<section class="hero hero-services" style="background: linear-gradient(180deg, rgba(6, 18, 34, 0.45) 0%, rgba(3, 10, 20, 0.60) 100%), url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=2400&q=90') center/cover no-repeat;">
 <div class="container">
-<div class="hero-copy" style="text-align: center; max-width: 800px; margin: 0 auto;">
+<div class="hero-copy" style="text-align: center; max-width: 820px; margin: 0 auto;">
 <span class="eyebrow" style="color: #05d7ff; border-color: rgba(255,255,255,0.2); background: rgba(255,255,255,0.1);">
-Our Services
+<i class="fa-solid fa-screwdriver-wrench"></i> Professional Fleet Services
 </span>
 <h1 style="color: #fff;">
-Comprehensive solutions for <span>your fleet.</span>
+End-to-end telematics deployment & <span>fleet engineering support.</span>
 </h1>
-<p style="color: rgba(255,255,255,0.9);">
-From implementation to ongoing support, we provide end-to-end services to ensure your success.
+<p style="color: rgba(255,255,255,0.9); font-size: 17px; line-height: 1.6;">
+From certified nationwide hardware installation to custom ERP/TMS integrations and continuous driver safety coaching, our dedicated fleet engineers ensure your organization achieves rapid adoption and maximum operational ROI.
 </p>
-<div class="hero-buttons" style="justify-content: center;">
+<div class="hero-buttons" style="justify-content: center; gap: 14px;">
 <button class="btn btn-primary" onclick="showPage('contact')">
-Get in Touch
+<i class="fa-solid fa-headset"></i> Request Consultation
+</button>
+<button class="btn btn-outline" onclick="showPage('pricing')" style="background: rgba(255,255,255,0.1); color: #fff; border-color: rgba(255,255,255,0.25);">
+<i class="fa-solid fa-tags"></i> View Service Packages
 </button>
 </div>
 </div>
 </div>
 </section>
 
-<!-- SECTION 1 -->
+<!-- SERVICE SHOWCASE 1: IMPLEMENTATION -->
 <section class="section">
 <div class="container">
-<div class="grid-2" style="align-items: center; gap: 60px;">
+<div class="grid-2" style="align-items: center; gap: 50px;">
 <div class="showcase-content">
 <span class="eyebrow">Service 01</span>
-<h2>Implementation & Onboarding</h2>
+<h2>Rapid Implementation & Hardware Onboarding</h2>
 <p>
-Our expert deployment team works on-site and remotely to ensure every tracker is installed correctly, and your command center is fully configured from day one.
+Deploying telematics shouldn't disrupt active transport schedules. Our certified technical teams handle end-to-end hardware installations — including OBD-II plug-ins, heavy-duty CAN-bus taps, fuel sensors, and dual-facing dashcams — during off-peak hours or depot downtime.
 </p>
-<ul class="check-list">
-<li><i class="fa-solid fa-check"></i> Hardware installation guidance</li>
-<li><i class="fa-solid fa-check"></i> Software configuration & tailoring</li>
-<li><i class="fa-solid fa-check"></i> Legacy data migration</li>
+<ul class="check-list" style="margin-top: 15px;">
+<li><i class="fa-solid fa-circle-check"></i> <strong>Zero vehicle downtime:</strong> Rapid installation scheduled around active delivery shifts.</li>
+<li><i class="fa-solid fa-circle-check"></i> <strong>Hardware pre-configuration:</strong> Every unit is SIM-activated, calibrated, and cloud-tested before installation.</li>
+<li><i class="fa-solid fa-circle-check"></i> <strong>Custom telemetry calibration:</strong> Fuel sensors, RPM limits, and speed thresholds configured per vehicle class.</li>
+<li><i class="fa-solid fa-circle-check"></i> <strong>Historical data migration:</strong> Seamlessly import your existing vehicle, driver, and depot records.</li>
 </ul>
 </div>
-<div class="showcase-visual" style="border-radius: 26px; overflow: hidden; height: 350px; box-shadow: var(--shadow2);">
+<div class="showcase-visual" style="border-radius: 22px; overflow: hidden; height: 360px; box-shadow: var(--shadow2); border: 1px solid var(--border);">
 <img src="images/Implementation & Onboarding.png" alt="Implementation & Onboarding" style="width: 100%; height: 100%; object-fit: cover;">
 </div>
 </div>
 </div>
 </section>
 
-<!-- SECTION 2 -->
+<!-- SERVICE SHOWCASE 2: API INTEGRATION -->
 <section class="section" style="background: rgba(8,108,255,0.03);">
 <div class="container">
-<div class="grid-2" style="align-items: center; gap: 60px;">
-<div class="showcase-visual" style="border-radius: 26px; overflow: hidden; height: 350px; box-shadow: var(--shadow2);">
+<div class="grid-2" style="align-items: center; gap: 50px;">
+<div class="showcase-visual" style="border-radius: 22px; overflow: hidden; height: 360px; box-shadow: var(--shadow2); border: 1px solid var(--border);">
 <img src="images/Custom API Integrations.png" alt="Custom API Integrations" style="width: 100%; height: 100%; object-fit: cover;">
 </div>
 <div class="showcase-content">
 <span class="eyebrow">Service 02</span>
-<h2>Custom API Integrations</h2>
+<h2>Custom API & Enterprise System Integrations</h2>
 <p>
-Connect FleetX with your existing ERP, payroll, or routing software. Our engineering team provides custom API middleware to keep your data flowing seamlessly.
+Eliminate manual double-entry. Our integration engineering team builds bi-directional connectors between FleetX and your existing ERP (SAP, Oracle, NetSuite), Transport Management Systems (TMS), fuel card providers, and payroll software.
 </p>
-<ul class="check-list">
-<li><i class="fa-solid fa-check"></i> REST and GraphQL architectures</li>
-<li><i class="fa-solid fa-check"></i> Real-time webhooks</li>
-<li><i class="fa-solid fa-check"></i> Secure authentication flows</li>
+<ul class="check-list" style="margin-top: 15px;">
+<li><i class="fa-solid fa-circle-check"></i> <strong>High-throughput REST & GraphQL:</strong> Real-time vehicle positions, odometer readings, and status sync.</li>
+<li><i class="fa-solid fa-circle-check"></i> <strong>Automated webhook pipelines:</strong> Trigger internal workflows on geofence arrival, maintenance flags, or accidents.</li>
+<li><i class="fa-solid fa-circle-check"></i> <strong>Fuel card reconciliation:</strong> Automatically match fuel pump transaction receipts with in-tank telemetry.</li>
+<li><i class="fa-solid fa-circle-check"></i> <strong>Driver payroll sync:</strong> Export verified operating hours, trip logs, and safety incentive bonuses.</li>
 </ul>
 </div>
 </div>
 </div>
 </section>
 
-<!-- SECTION 3 -->
+<!-- 4-STEP METHODOLOGY -->
 <section class="section">
 <div class="container">
+<div class="section-title">
+<span class="eyebrow">Deployment Lifecycle</span>
+<h2>Our structured 4-step implementation methodology.</h2>
+<p>
+A battle-tested deployment process ensuring smooth onboarding, staff confidence, and rapid time to value.
+</p>
+</div>
+<div class="phase-roadmap">
+<div class="roadmap-phase">
+<div class="phase-header">
+<span class="phase-tag">Phase 01</span>
+<span class="phase-duration">Days 1 - 5</span>
+</div>
+<h3>Fleet Audit &amp; Strategy</h3>
+<p>We analyze vehicle makes, engine protocols, operating routes, and primary objectives to design a tailored rollout roadmap.</p>
+<ul class="phase-deliverables">
+<li><i class="fa-solid fa-check"></i> Fleet protocol audit</li>
+<li><i class="fa-solid fa-check"></i> Rollout timeline matrix</li>
+<li><i class="fa-solid fa-check"></i> KPI definition benchmark</li>
+</ul>
+</div>
+<div class="roadmap-phase">
+<div class="phase-header">
+<span class="phase-tag">Phase 02</span>
+<span class="phase-duration">Days 6 - 15</span>
+</div>
+<h3>Hardware Provisioning</h3>
+<p>Certified engineers install and calibrate trackers, fuel sensors, and dashcams with complete verification before deployment.</p>
+<ul class="phase-deliverables">
+<li><i class="fa-solid fa-check"></i> Off-peak depot installation</li>
+<li><i class="fa-solid fa-check"></i> CAN-bus signal calibration</li>
+<li><i class="fa-solid fa-check"></i> Telemetry link verification</li>
+</ul>
+</div>
+<div class="roadmap-phase">
+<div class="phase-header">
+<span class="phase-tag">Phase 03</span>
+<span class="phase-duration">Days 16 - 22</span>
+</div>
+<h3>Team Training &amp; Config</h3>
+<p>Hands-on workshops for dispatchers, safety supervisors, and maintenance coordinators to ensure 100% operational fluency.</p>
+<ul class="phase-deliverables">
+<li><i class="fa-solid fa-check"></i> Dispatcher console training</li>
+<li><i class="fa-solid fa-check"></i> Driver app onboarding</li>
+<li><i class="fa-solid fa-check"></i> Geofence &amp; rule setup</li>
+</ul>
+</div>
+<div class="roadmap-phase">
+<div class="phase-header">
+<span class="phase-tag">Phase 04</span>
+<span class="phase-duration">Continuous</span>
+</div>
+<h3>Continuous Optimization</h3>
+<p>Quarterly business reviews with your dedicated technical account manager to analyze fuel savings and safety metrics.</p>
+<ul class="phase-deliverables">
+<li><i class="fa-solid fa-check"></i> Quarterly ROI audit</li>
+<li><i class="fa-solid fa-check"></i> Predictive maintenance tuning</li>
+<li><i class="fa-solid fa-check"></i> Priority engineering support</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<!-- SPECIALIZED SERVICES CATALOG -->
+<section class="section" style="background: rgba(8,108,255,0.03);">
+<div class="container">
+<div class="section-title">
+<span class="eyebrow">Services Catalog</span>
+<h2>Comprehensive solutions for every fleet requirement.</h2>
+<p>
+Ongoing expert guidance and technical capabilities to keep your transport operations running at peak efficiency.
+</p>
+</div>
 <div class="info-band">
 <div class="info-box" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
 <img src="images/Training Workshops.png" alt="Training Workshops" style="width: 100%; height: 180px; object-fit: cover; display: block; border-bottom: 1px solid var(--border);">
-<div style="padding: 30px; flex: 1;">
+<div style="padding: 24px; flex: 1;">
 <div class="info-number">03</div>
-<h3>Training Workshops</h3>
-<p>On-site or virtual training for your dispatchers and fleet managers to maximize platform utilization.</p>
+<h3>Driver & Staff Workshops</h3>
+<p>Interactive training sessions that guide drivers on safety standards and teach dispatchers rapid re-routing techniques.</p>
 </div>
 </div>
 <div class="info-box" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
 <img src="images/Strategy Consulting.png" alt="Strategy Consulting" style="width: 100%; height: 180px; object-fit: cover; display: block; border-bottom: 1px solid var(--border);">
-<div style="padding: 30px; flex: 1;">
+<div style="padding: 24px; flex: 1;">
 <div class="info-number">04</div>
-<h3>Strategy Consulting</h3>
-<p>Data analysts review your fleet's metrics quarterly to identify fuel and routing optimizations.</p>
+<h3>Telematics Strategy Consulting</h3>
+<p>Data analysts examine your telematics history to identify route redundancies, fuel theft anomalies, and optimization gains.</p>
 </div>
 </div>
 <div class="info-box" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
 <img src="images/24 7 Support.png" alt="24/7 Support" style="width: 100%; height: 180px; object-fit: cover; display: block; border-bottom: 1px solid var(--border);">
-<div style="padding: 30px; flex: 1;">
+<div style="padding: 24px; flex: 1;">
 <div class="info-number">05</div>
-<h3>24/7 Support</h3>
-<p>Dedicated account managers and technical support available around the clock.</p>
+<h3>24/7 Mission-Critical Support</h3>
+<p>Direct priority access to telematics network engineers to resolve tracking, hardware, or connectivity inquiries 24/7/365.</p>
 </div>
 </div>
 <div class="info-box" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
 <img src="images/Custom Reporting.png" alt="Custom Reporting" style="width: 100%; height: 180px; object-fit: cover; display: block; border-bottom: 1px solid var(--border);">
-<div style="padding: 30px; flex: 1;">
+<div style="padding: 24px; flex: 1;">
 <div class="info-number">06</div>
-<h3>Custom Reporting</h3>
-<p>Tailor-made dashboards and automated reports delivered directly to your stakeholders.</p>
+<h3>Custom Report Development</h3>
+<p>Tailored KPI dashboards and automated scheduled PDF/Excel reports delivered directly to executive leadership.</p>
 </div>
 </div>
 <div class="info-box" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
 <img src="images/Hardware Upgrades.png" alt="Hardware Upgrades" style="width: 100%; height: 180px; object-fit: cover; display: block; border-bottom: 1px solid var(--border);">
-<div style="padding: 30px; flex: 1;">
+<div style="padding: 24px; flex: 1;">
 <div class="info-number">07</div>
-<h3>Hardware Upgrades</h3>
-<p>Seamless installation and trade-in of next-generation GPS trackers and dashcams.</p>
+<h3>Hardware Trade-In & Upgrades</h3>
+<p>Hassle-free upgrade paths to 4G/5G LTE devices, AI dashcams, and BLE wireless sensors with zero capital lock-in.</p>
 </div>
 </div>
 <div class="info-box" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
 <img src="images/Fleet Audits.png" alt="Fleet Audits" style="width: 100%; height: 180px; object-fit: cover; display: block; border-bottom: 1px solid var(--border);">
-<div style="padding: 30px; flex: 1;">
+<div style="padding: 24px; flex: 1;">
 <div class="info-number">08</div>
-<h3>Fleet Audits</h3>
-<p>Comprehensive review of fleet health, vehicle utilization, and safety compliance.</p>
+<h3>Safety & Regulatory Audits</h3>
+<p>Thorough compliance verification for AIS-140 standards, driving hours regulations, and preventative maintenance records.</p>
 </div>
 </div>
 </div>
 </div>
 </section>
 
-<!-- SECTION 4 -->
+<!-- ENTERPRISE SLA GUARANTEES -->
+<section class="section">
+<div class="container">
+<div class="section-title">
+<span class="eyebrow">Service Guarantees</span>
+<h2>Enterprise reliability backed by strict SLAs.</h2>
+<p>
+We stand behind our telematics uptime and technical support with industry-leading commitments.
+</p>
+</div>
+<div class="sla-certificate-box">
+<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; border-bottom: 1px solid rgba(255,255,255,0.12); padding-bottom: 22px;">
+<div>
+<span style="color: var(--cyan); font-weight: 800; font-size: 12px; letter-spacing: 1px; text-transform: uppercase;">Enterprise Assurance Policy</span>
+<h3 style="font-family: 'Manrope', sans-serif; font-size: 24px; color: #fff; margin-top: 4px;">Guaranteed Service Level Agreement</h3>
+</div>
+<div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(0, 215, 255, 0.12); border: 1px solid rgba(0, 215, 255, 0.3); padding: 8px 16px; border-radius: 50px; color: var(--cyan); font-size: 13px; font-weight: 800;">
+<i class="fa-solid fa-shield-halved"></i> Tier-1 Enterprise Protection
+</div>
+</div>
+<div class="sla-grid">
+<div class="sla-item">
+<div class="sla-badge-row">
+<i class="fa-solid fa-server"></i>
+<span class="sla-badge">Uptime</span>
+</div>
+<div class="sla-metric">99.99%</div>
+<h4>Cloud Uptime SLA</h4>
+<p>Redundant multi-zone cloud architecture ensures live vehicle tracking is always accessible when you need it.</p>
+</div>
+<div class="sla-item">
+<div class="sla-badge-row">
+<i class="fa-solid fa-bolt"></i>
+<span class="sla-badge">Speed</span>
+</div>
+<div class="sla-metric">&lt;15 Min</div>
+<h4>Critical Response</h4>
+<p>Guaranteed rapid escalation and active engineer engagement for critical operational alerts.</p>
+</div>
+<div class="sla-item">
+<div class="sla-badge-row">
+<i class="fa-solid fa-box-check"></i>
+<span class="sla-badge">Warranty</span>
+</div>
+<div class="sla-metric">100%</div>
+<h4>Hardware Replacement</h4>
+<p>Next-business-day hardware advance replacement for any malfunctioning device under warranty.</p>
+</div>
+<div class="sla-item">
+<div class="sla-badge-row">
+<i class="fa-solid fa-user-tie"></i>
+<span class="sla-badge">Dedicated</span>
+</div>
+<div class="sla-metric">1-on-1</div>
+<h4>Dedicated TAM</h4>
+<p>Your personal Technical Account Manager coordinates installations, custom reports, and system integrations.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
 <section class="section">
 <div class="container">
 <div class="emoji-panel">
-<div class="emoji">🤝</div>
-<h2>Partner with FleetX</h2>
-<p style="max-width:650px;margin:9px auto 19px;color:var(--muted);font-size:16px;">
-Let our services team act as an extension of your fleet operations.
+<div class="cta-icon-badge"><i class="fa-solid fa-handshake"></i></div>
+<h2>Partner with FleetX Professional Services</h2>
+<p>
+Let our telematics engineering team become an extension of your fleet operations. Reach out today to structure an implementation plan tailored to your fleet.
 </p>
-<button class="btn btn-primary" onclick="showPage('pricing')" style="width: auto; padding: 0 28px; white-space: nowrap;">
-View Service Packages
+<div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
+<button class="btn btn-primary" onclick="showPage('contact')">
+<i class="fa-solid fa-handshake"></i> Talk to a Services Specialist
 </button>
+<button class="btn btn-outline" onclick="showPage('pricing')">
+<i class="fa-solid fa-list-check"></i> Explore Pricing Plans
+</button>
+</div>
 </div>
 </div>
 </section>

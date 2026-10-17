@@ -102,32 +102,35 @@ Login
 </div>
 </nav>
 <!-- =========================================================
+<!-- =========================================================
 FEATURES
 ========================================================= -->
 <main id="features" class="page active">
-<section class="hero" style="background: var(--navy);">
+<section class="hero hero-features" style="background: linear-gradient(180deg, rgba(6, 18, 34, 0.42) 0%, rgba(3, 10, 20, 0.58) 100%), url('https://images.unsplash.com/photo-1508974239320-0a029497e820?auto=format&fit=crop&w=2400&q=90') center/cover no-repeat;">
 <div class="container">
-<div class="hero-copy" style="text-align: center; max-width: 800px; margin: 0 auto;">
+<div class="hero-copy" style="text-align: center; max-width: 820px; margin: 0 auto;">
 <span class="eyebrow" style="color: #05d7ff; border-color: rgba(255,255,255,0.2); background: rgba(255,255,255,0.1);">
-Platform Features
+<i class="fa-solid fa-satellite-dish"></i> Platform Feature Suite
 </span>
 <h1 style="color: #fff;">
-The fleet stack built for <span>daily operations.</span>
+The complete fleet intelligence stack <span>built for daily operations.</span>
 </h1>
-<p style="color: rgba(255,255,255,0.9);">
-FleetX combines location intelligence, driver behavior,
-fuel analytics, maintenance, geofencing and alerts so fleet
-teams can work from a single operational system.
+<p style="color: rgba(255,255,255,0.9); font-size: 17px; line-height: 1.6;">
+FleetX unifies sub-second GPS tracking, AI driver safety scorecards, fuel analytics, automated maintenance, geofencing, and smart alert automation into one reliable operational system.
 </p>
-<div class="hero-buttons" style="justify-content: center;">
+<div class="hero-buttons" style="justify-content: center; gap: 14px;">
 <button class="btn btn-primary" onclick="showPage('contact')">
-Request Demo
+<i class="fa-solid fa-calendar-check"></i> Request Live Demo
+</button>
+<button class="btn btn-outline" onclick="showPage('dashboard')" style="background: rgba(255,255,255,0.1); color: #fff; border-color: rgba(255,255,255,0.25);">
+<i class="fa-solid fa-chart-line"></i> View Live Dashboard
 </button>
 </div>
 </div>
 </div>
 </section>
-<!-- REPLACED IMAGE SECTION WITH LIVE TRACKING -->
+
+<!-- LIVE TRACKING INTERACTIVE SECTION -->
 <section class="section">
 <div class="container">
 <div class="live-section">
@@ -197,6 +200,8 @@ TRACKING ACTIVE
 </div>
 </div>
 </section>
+
+<!-- CORE CAPABILITIES GRID -->
 <section class="section">
 <div class="container">
 <div class="section-title">
@@ -204,65 +209,121 @@ TRACKING ACTIVE
 Fleet Capabilities
 </span>
 <h2>
-Everything required to understand the fleet.
+Everything required to command and optimize your fleet.
 </h2>
 <p>
-Each module is designed around a specific operational requirement while
-remaining connected to the broader fleet picture.
+Each module is designed around a specific operational requirement while feeding into a unified fleet data lake.
 </p>
 </div>
 <div class="grid-3">
 <div class="feature-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
 <img src="images/Real-Time GPS.png" alt="Real-Time GPS" style="width: 100%; height: 180px; object-fit: cover; display: block; border-bottom: 1px solid var(--border);">
-<div style="padding: 30px; flex: 1;">
-<div class="feature-icon" style="margin-bottom: 15px;"><i class="fa-solid fa-location-crosshairs"></i></div>
-<h3>Real-Time GPS</h3>
-<p>Monitor vehicle position, movement status, route progress and journey history from a centralized tracking workspace.</p>
+<div style="padding: 24px; flex: 1; text-align: center;">
+<div class="feature-icon" style="margin: 0 auto 15px;"><i class="fa-solid fa-location-crosshairs"></i></div>
+<h3>Real-Time GPS Tracking</h3>
+<p>Monitor exact vehicle coordinates, turn-by-turn route progress, stop durations, and historical playback with sub-second accuracy.</p>
 </div>
 </div>
 <div class="feature-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
 <img src="images/Driver Behavior.png" alt="Driver Behavior" style="width: 100%; height: 180px; object-fit: cover; display: block; border-bottom: 1px solid var(--border);">
-<div style="padding: 30px; flex: 1;">
-<div class="feature-icon" style="margin-bottom: 15px;"><i class="fa-solid fa-user-shield"></i></div>
-<h3>Driver Behavior</h3>
-<p>Measure speeding, braking, acceleration, idling and other driving events to support measurable safety programs.</p>
+<div style="padding: 24px; flex: 1; text-align: center;">
+<div class="feature-icon" style="margin: 0 auto 15px;"><i class="fa-solid fa-user-shield"></i></div>
+<h3>Driver Safety Scorecards</h3>
+<p>Measure speeding, harsh braking, rapid acceleration, and excessive idling to coach drivers and reduce collision risk.</p>
 </div>
 </div>
 <div class="feature-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
 <img src="images/Fuel Analytics.png" alt="Fuel Analytics" style="width: 100%; height: 180px; object-fit: cover; display: block; border-bottom: 1px solid var(--border);">
-<div style="padding: 30px; flex: 1;">
-<div class="feature-icon" style="margin-bottom: 15px;"><i class="fa-solid fa-gas-pump"></i></div>
-<h3>Fuel Analytics</h3>
-<p>Review fuel consumption and efficiency patterns to help teams investigate unusual operating behavior.</p>
+<div style="padding: 24px; flex: 1; text-align: center;">
+<div class="feature-icon" style="margin: 0 auto 15px;"><i class="fa-solid fa-gas-pump"></i></div>
+<h3>Fuel Intelligence & Diagnostics</h3>
+<p>Track tank levels, mileage efficiency, and sudden drops in fuel volume to detect unauthorized siphoning and waste.</p>
 </div>
 </div>
 <div class="feature-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
 <img src="images/Maintenance.png" alt="Maintenance" style="width: 100%; height: 180px; object-fit: cover; display: block; border-bottom: 1px solid var(--border);">
-<div style="padding: 30px; flex: 1;">
-<div class="feature-icon" style="margin-bottom: 15px;"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-<h3>Maintenance</h3>
-<p>Manage service intervals, maintenance history, inspection reminders and vehicle readiness information.</p>
+<div style="padding: 24px; flex: 1; text-align: center;">
+<div class="feature-icon" style="margin: 0 auto 15px;"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+<h3>Preventative Maintenance</h3>
+<p>Automate service intervals based on real odometer readings, track engine fault codes, and prevent catastrophic on-road breakdowns.</p>
 </div>
 </div>
 <div class="feature-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
 <img src="images/Geofencing.png" alt="Geofencing" style="width: 100%; height: 180px; object-fit: cover; display: block; border-bottom: 1px solid var(--border);">
-<div style="padding: 30px; flex: 1;">
-<div class="feature-icon" style="margin-bottom: 15px;"><i class="fa-solid fa-draw-polygon"></i></div>
-<h3>Geofencing</h3>
-<p>Build operational zones and receive entry, exit and dwell events around warehouses, customers and restricted areas.</p>
+<div style="padding: 24px; flex: 1; text-align: center;">
+<div class="feature-icon" style="margin: 0 auto 15px;"><i class="fa-solid fa-draw-polygon"></i></div>
+<h3>Polygonal Geofencing</h3>
+<p>Create custom virtual boundaries around customer depots, loading docks, and prohibited zones with instant entry/exit timestamps.</p>
 </div>
 </div>
 <div class="feature-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
 <img src="images/Smart Alerts.png" alt="Smart Alerts" style="width: 100%; height: 180px; object-fit: cover; display: block; border-bottom: 1px solid var(--border);">
-<div style="padding: 30px; flex: 1;">
-<div class="feature-icon" style="margin-bottom: 15px;"><i class="fa-solid fa-bell"></i></div>
-<h3>Smart Alerts</h3>
-<p>Configure notifications for events such as overspeeding, geofence activity, route deviation and maintenance requirements.</p>
+<div style="padding: 24px; flex: 1; text-align: center;">
+<div class="feature-icon" style="margin: 0 auto 15px;"><i class="fa-solid fa-bell"></i></div>
+<h3>Automated Smart Alerts</h3>
+<p>Multi-channel notifications via SMS, email, WhatsApp, and push alerts for speed violations, geofence breaches, and battery disconnects.</p>
 </div>
 </div>
 </div>
 </div>
 </section>
+
+<!-- ADVANCED MISSION-CRITICAL MODULES -->
+<section class="section" style="background: rgba(8,108,255,0.03);">
+<div class="container">
+<div class="section-title">
+<span class="eyebrow">Advanced Modules</span>
+<h2>Specialized capabilities for commercial logistics fleets.</h2>
+<p>
+Engineered to handle stringent compliance standards, cold chain requirements, and dynamic dispatching.
+</p>
+</div>
+<div class="module-grid">
+<div class="module-card">
+<div class="module-icon-wrap">
+<i class="fa-solid fa-snowflake"></i>
+</div>
+<div class="module-body">
+<span class="module-tag">Cold Chain IoT</span>
+<h3>Cold Chain Temperature Telemetry</h3>
+<p>Wireless BLE temperature and humidity sensors log ambient trailer climate continuously, triggering instant alerts on threshold breaches to prevent cargo spoilage.</p>
+</div>
+</div>
+<div class="module-card">
+<div class="module-icon-wrap">
+<i class="fa-solid fa-route"></i>
+</div>
+<div class="module-body">
+<span class="module-tag">AI Optimization</span>
+<h3>Dynamic Route Optimization</h3>
+<p>AI algorithms calculate the most fuel-efficient sequence of stops, reducing unnecessary mileage, avoiding traffic bottlenecks, and improving daily drops per driver.</p>
+</div>
+</div>
+<div class="module-card">
+<div class="module-icon-wrap">
+<i class="fa-solid fa-shield-halved"></i>
+</div>
+<div class="module-body">
+<span class="module-tag">Regulatory Compliance</span>
+<h3>AIS-140 &amp; SOS Compliance</h3>
+<p>Government-certified emergency panic buttons, tamper detection sensors, and automated safety compliance logs for regulatory mandates across interstate transit.</p>
+</div>
+</div>
+<div class="module-card">
+<div class="module-icon-wrap">
+<i class="fa-solid fa-signature"></i>
+</div>
+<div class="module-body">
+<span class="module-tag">Chain of Custody</span>
+<h3>Digital Proof of Delivery (e-POD)</h3>
+<p>Driver mobile app records digital signatures, barcode scans, and photo delivery proof with automatic customer notifications and timestamped geofence logs.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ANALYTICS SECTION -->
 <section class="section">
 <div class="container">
 <div class="grid-2">
@@ -278,53 +339,55 @@ decoding="async">
 Fleet Analytics
 </span>
 <h2>
-Make operational patterns visible.
+Make operational patterns visible and actionable.
 </h2>
 <p>
-Fleet managers often need to compare large amounts of information
-across vehicles, routes, drivers and operating periods. FleetX
-organizes those signals into practical analytics views.
+Fleet managers often struggle with massive spreadsheets across multiple depots. FleetX aggregates and translates complex telematics streams into clear executive scorecards.
 </p>
 <ul class="check-list">
-<li><i class="fa-solid fa-circle-check"></i> Utilization analysis</li>
-<li><i class="fa-solid fa-circle-check"></i> Driver performance trends</li>
-<li><i class="fa-solid fa-circle-check"></i> Fuel efficiency</li>
-<li><i class="fa-solid fa-circle-check"></i> Maintenance visibility</li>
+<li><i class="fa-solid fa-circle-check"></i> <strong>Asset utilization:</strong> Identify underused vehicles and optimize vehicle distribution across depots.</li>
+<li><i class="fa-solid fa-circle-check"></i> <strong>Driver trend benchmarking:</strong> Reward top defensive drivers and schedule targeted coaching.</li>
+<li><i class="fa-solid fa-circle-check"></i> <strong>Total fuel economics:</strong> Track cost-per-kilometer across various routes, payloads, and driver shifts.</li>
+<li><i class="fa-solid fa-circle-check"></i> <strong>Preventative maintenance forecast:</strong> Predict part failures before they result in expensive towing fees.</li>
 </ul>
 </div>
 </div>
 </div>
 </section>
-<section class="section">
+
+<!-- INFO BAND: 3 PILLARS -->
+<section class="section" style="background: rgba(8,108,255,0.03);">
 <div class="container">
 <div class="info-band">
 <div class="info-box" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
 <img src="images/Fleet Visibility.png" alt="Fleet Visibility" style="width: 100%; height: 180px; object-fit: cover; display: block; border-bottom: 1px solid var(--border);">
-<div style="padding: 30px; flex: 1;">
+<div style="padding: 24px; flex: 1;">
 <div class="info-number">360°</div>
-<h3>Fleet Visibility</h3>
-<p>Bring vehicle, route, driver and operational information into one connected view.</p>
+<h3>Complete Fleet Visibility</h3>
+<p>Bring vehicle position, route, driver, cargo health, and maintenance status into one connected view.</p>
 </div>
 </div>
 <div class="info-box" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
 <img src="images/Monitoring.png" alt="Monitoring" style="width: 100%; height: 180px; object-fit: cover; display: block; border-bottom: 1px solid var(--border);">
-<div style="padding: 30px; flex: 1;">
+<div style="padding: 24px; flex: 1;">
 <div class="info-number">24/7</div>
-<h3>Monitoring</h3>
-<p>Keep operational teams informed about live fleet activity and important exceptions.</p>
+<h3>Uninterrupted Monitoring</h3>
+<p>Keep dispatchers and managers constantly informed of active trips and high-priority exceptions.</p>
 </div>
 </div>
 <div class="info-box" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
 <img src="images/Workspace.png" alt="Workspace" style="width: 100%; height: 180px; object-fit: cover; display: block; border-bottom: 1px solid var(--border);">
-<div style="padding: 30px; flex: 1;">
+<div style="padding: 24px; flex: 1;">
 <div class="info-number">1</div>
-<h3>Workspace</h3>
-<p>Reduce dependence on disconnected tracking, spreadsheets and isolated reporting tools.</p>
+<h3>Unified Cloud Workspace</h3>
+<p>Replace isolated GPS portals, spreadsheets, and messaging groups with a single source of truth.</p>
 </div>
 </div>
 </div>
 </div>
 </section>
+
+<!-- WORKFLOW CARDS -->
 <section class="section">
 <div class="container">
 <div class="grid-2" style="align-items: stretch;">
@@ -334,15 +397,12 @@ src="images/Designed around real fleet workflows.png"
 alt="Designed around real fleet workflows"
 loading="lazy"
 decoding="async">
-<div class="card-content" style="flex: 1;">
+<div class="card-content" style="flex: 1; padding: 24px;">
 <h3>
 Designed around real fleet workflows
 </h3>
 <p>
-Fleet managers can focus on operational visibility while dispatch,
-safety and maintenance teams work with the information relevant to
-their responsibilities. The connected data layer helps maintain
-one consistent operational picture.
+Fleet managers focus on operational strategy while dispatchers, safety officers, and mechanics work with tools tailored to their daily responsibilities. Everyone sees the same verified data.
 </p>
 </div>
 </div>
@@ -352,34 +412,36 @@ src="images/Automated alert pipelines.png"
 alt="Automated alert pipelines"
 loading="lazy"
 decoding="async">
-<div class="card-content" style="flex: 1;">
+<div class="card-content" style="flex: 1; padding: 24px;">
 <h3>
-Automated alert pipelines
+Automated exception pipelines
 </h3>
 <p>
-Reduce manual monitoring with smart triggers. FleetX automatically notifies
-dispatch and maintenance teams about critical engine fault codes,
-route deviations, and aggressive driving behavior instantly.
+Eliminate manual screen watching. FleetX instantly routes notifications when a vehicle deviates from its scheduled route, enters unauthorized zones, or triggers engine diagnostic trouble codes (DTCs).
 </p>
 </div>
 </div>
 </div>
 </div>
 </section>
+
+<!-- CTA -->
 <section class="section">
 <div class="container">
 <div class="emoji-panel">
-<div class="emoji">⚡</div>
-<h2>
-Faster visibility. Better fleet decisions.
-</h2>
-<p style="max-width:650px;margin:9px auto 19px;color:var(--muted);font-size:12px;">
-FleetX turns connected vehicle data into information that your
-operations team can understand and act on.
+<div class="cta-icon-badge"><i class="fa-solid fa-bolt"></i></div>
+<h2>Faster visibility. Smarter fleet decisions.</h2>
+<p>
+FleetX turns connected vehicle data into actionable intelligence your operational team can act on immediately.
 </p>
+<div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
 <button class="btn btn-primary" onclick="showPage('dashboard')">
-Explore Dashboard
+<i class="fa-solid fa-chart-pie"></i> Explore Live Dashboard
 </button>
+<button class="btn btn-outline" onclick="showPage('contact')">
+<i class="fa-solid fa-headset"></i> Talk to a Fleet Specialist
+</button>
+</div>
 </div>
 </div>
 </section>

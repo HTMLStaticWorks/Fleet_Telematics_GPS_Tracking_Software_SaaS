@@ -102,30 +102,35 @@ Login
 </div>
 </nav>
 <!-- =========================================================
+<!-- =========================================================
 PRICING
 ========================================================= -->
 <main id="pricing" class="page active">
-<section class="hero" style="background: var(--navy);">
+<section class="hero hero-pricing" style="background: linear-gradient(180deg, rgba(6, 18, 34, 0.45) 0%, rgba(3, 10, 20, 0.60) 100%), url('https://images.unsplash.com/photo-1506015391300-4802dc74de2e?auto=format&fit=crop&w=2400&q=90') center/cover no-repeat;">
 <div class="container">
-<div class="hero-copy" style="text-align: center; max-width: 800px; margin: 0 auto;">
+<div class="hero-copy" style="text-align: center; max-width: 820px; margin: 0 auto;">
 <span class="eyebrow" style="color: #05d7ff; border-color: rgba(255,255,255,0.2); background: rgba(255,255,255,0.1);">
-Pricing
+<i class="fa-solid fa-tags"></i> Transparent SaaS Pricing
 </span>
 <h1 style="color: #fff;">
-Simple plans for <span>growing fleets.</span>
+Predictable plans designed to <span>scale with your growing fleet.</span>
 </h1>
-<p style="color: rgba(255,255,255,0.9);">
-Choose a plan around your vehicle count and operational requirements.
-Enterprise configurations can be customized for larger and more complex fleets.
+<p style="color: rgba(255,255,255,0.9); font-size: 17px; line-height: 1.6;">
+No hidden fees, hardware-agnostic connectivity, and flexible billing options. Start with core real-time visibility and seamlessly add driver safety scorecards, fuel analytics, and maintenance workflows as your operations expand.
 </p>
-<div class="hero-buttons" style="justify-content: center;">
+<div class="hero-buttons" style="justify-content: center; gap: 14px;">
 <button class="btn btn-primary" onclick="showPage('contact')">
-Request Pricing
+<i class="fa-solid fa-calculator"></i> Request Custom Quote
+</button>
+<button class="btn btn-outline" onclick="document.getElementById('planComparison').scrollIntoView({behavior:'smooth'})" style="background: rgba(255,255,255,0.1); color: #fff; border-color: rgba(255,255,255,0.25);">
+<i class="fa-solid fa-table-list"></i> Compare All Plans
 </button>
 </div>
 </div>
 </div>
 </section>
+
+<!-- 3 PRICING TIERS -->
 <section class="section">
 <div class="container">
 <div class="section-title">
@@ -133,104 +138,242 @@ Request Pricing
 Flexible Fleet Plans
 </span>
 <h2>
-Start with the capabilities your operation needs.
+Start with the capabilities your operation needs today.
 </h2>
 <p>
-The example plans below are demonstration pricing and can be adapted to your actual commercial model.
+All plans include cloud access, mobile apps for iOS and Android, automated daily backups, and unlimited driver seats.
 </p>
 </div>
 <div class="pricing">
 <div class="price-card">
 <h3>Starter</h3>
-<p>For focused fleet visibility.</p>
+<p>Essential real-time tracking for focused fleet operations.</p>
 <div class="price">
 ₹1,499
 <small>/vehicle/mo</small>
 </div>
 <ul class="price-list">
-<li><i class="fa-solid fa-check"></i> Live GPS tracking</li>
-<li><i class="fa-solid fa-check"></i> Route history</li>
-<li><i class="fa-solid fa-check"></i> Basic geofencing</li>
-<li><i class="fa-solid fa-check"></i> Standard alerts</li>
-<li><i class="fa-solid fa-check"></i> Basic reports</li>
+<li><i class="fa-solid fa-check"></i> Live GPS tracking (30s refresh)</li>
+<li><i class="fa-solid fa-check"></i> 60 days route history & playback</li>
+<li><i class="fa-solid fa-check"></i> Up to 20 custom geofence zones</li>
+<li><i class="fa-solid fa-check"></i> Speed & ignition alert triggers</li>
+<li><i class="fa-solid fa-check"></i> Standard mileage & trip reports</li>
+<li><i class="fa-solid fa-check"></i> Driver mobile app (iOS/Android)</li>
 </ul>
 <button class="btn btn-outline" onclick="showPage('contact')">
-Choose Plan
+Choose Starter
 </button>
 </div>
 <div class="price-card featured">
 <span class="popular">POPULAR</span>
 <h3>Professional</h3>
-<p>For growing fleet operations.</p>
+<p>Complete telematics suite for scaling transport fleets.</p>
 <div class="price">
 ₹2,499
 <small>/vehicle/mo</small>
 </div>
 <ul class="price-list">
 <li><i class="fa-solid fa-check"></i> Everything in Starter</li>
-<li><i class="fa-solid fa-check"></i> Driver scorecards</li>
-<li><i class="fa-solid fa-check"></i> Fuel analytics</li>
-<li><i class="fa-solid fa-check"></i> Maintenance</li>
-<li><i class="fa-solid fa-check"></i> Advanced alerts</li>
+<li><i class="fa-solid fa-check"></i> Real-time tracking (10s refresh)</li>
+<li><i class="fa-solid fa-check"></i> AI driver safety scorecards</li>
+<li><i class="fa-solid fa-check"></i> Fuel consumption & drainage alerts</li>
+<li><i class="fa-solid fa-check"></i> Preventative maintenance planner</li>
+<li><i class="fa-solid fa-check"></i> Unlimited polygonal geofences</li>
+<li><i class="fa-solid fa-check"></i> Multi-channel WhatsApp/SMS alerts</li>
 </ul>
 <button class="btn btn-primary" onclick="showPage('contact')">
-Choose Plan
+Choose Professional
 </button>
 </div>
 <div class="price-card">
 <h3>Enterprise</h3>
-<p>For complex fleet operations.</p>
+<p>Dedicated architecture for complex multi-depot operations.</p>
 <div class="price">
 Custom
-<small>pricing</small>
+<small>volume pricing</small>
 </div>
 <ul class="price-list">
 <li><i class="fa-solid fa-check"></i> Everything in Professional</li>
-<li><i class="fa-solid fa-check"></i> Advanced analytics</li>
-<li><i class="fa-solid fa-check"></i> Custom integrations</li>
-<li><i class="fa-solid fa-check"></i> Role-based access</li>
-<li><i class="fa-solid fa-check"></i> Dedicated support</li>
+<li><i class="fa-solid fa-check"></i> Sub-second telemetry (5s refresh)</li>
+<li><i class="fa-solid fa-check"></i> Cold chain temperature telemetry</li>
+<li><i class="fa-solid fa-check"></i> Full REST API & webhook connectors</li>
+<li><i class="fa-solid fa-check"></i> ERP / TMS custom integration</li>
+<li><i class="fa-solid fa-check"></i> 99.99% Cloud SLA guarantee</li>
+<li><i class="fa-solid fa-check"></i> Dedicated Technical Account Manager</li>
 </ul>
 <button class="btn btn-outline" onclick="showPage('contact')">
-Talk to Sales
+Talk to Enterprise Sales
 </button>
 </div>
 </div>
 </div>
 </section>
+
+<!-- PLAN COMPARISON TABLE -->
+<section class="section" id="planComparison" style="background: rgba(8,108,255,0.03);">
+<div class="container">
+<div class="section-title">
+<span class="eyebrow">Detailed Breakdown</span>
+<h2>Comprehensive plan feature comparison.</h2>
+<p>
+Examine exact capabilities, storage limits, and integration options across our three tiers.
+</p>
+</div>
+<div class="pricing-table-wrap">
+<table class="pricing-table">
+<thead>
+<tr>
+<th class="col-feature">Platform Capability</th>
+<th class="col-plan">Starter</th>
+<th class="col-plan">Professional</th>
+<th class="col-plan">Enterprise</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GPS Ping Interval</strong></td>
+<td class="col-plan">30 Seconds</td>
+<td class="col-plan"><span class="pricing-badge">10 Seconds</span></td>
+<td class="col-plan"><span class="pricing-badge">5s / Sub-Second</span></td>
+</tr>
+<tr>
+<td><strong>Trip History & Playback</strong></td>
+<td class="col-plan">60 Days</td>
+<td class="col-plan">1 Full Year</td>
+<td class="col-plan">Unlimited Historical</td>
+</tr>
+<tr>
+<td><strong>Geofencing Capacity</strong></td>
+<td class="col-plan">20 Zones</td>
+<td class="col-plan">Unlimited Zones</td>
+<td class="col-plan">Unlimited Polygonal</td>
+</tr>
+<tr>
+<td><strong>Driver Safety Scorecards</strong></td>
+<td class="col-plan"><span class="pricing-dash">Basic Speeding</span></td>
+<td class="col-plan"><i class="fa-solid fa-circle-check pricing-check"></i> Full AI Suite</td>
+<td class="col-plan"><i class="fa-solid fa-circle-check pricing-check"></i> AI + Video Telematics</td>
+</tr>
+<tr>
+<td><strong>Fuel Sensor & CAN-Bus Telemetry</strong></td>
+<td class="col-plan"><span class="pricing-dash">—</span></td>
+<td class="col-plan"><i class="fa-solid fa-circle-check pricing-check"></i> Real-Time In-Tank</td>
+<td class="col-plan"><i class="fa-solid fa-circle-check pricing-check"></i> Multi-Tank & CAN-Bus</td>
+</tr>
+<tr>
+<td><strong>Preventative Maintenance Engine</strong></td>
+<td class="col-plan">Manual Log</td>
+<td class="col-plan"><i class="fa-solid fa-circle-check pricing-check"></i> Odometer Automated</td>
+<td class="col-plan"><i class="fa-solid fa-circle-check pricing-check"></i> Predictive Diagnostics</td>
+</tr>
+<tr>
+<td><strong>Cold Chain Temperature Probes</strong></td>
+<td class="col-plan"><span class="pricing-dash">—</span></td>
+<td class="col-plan"><span class="pricing-dash">Optional Add-on</span></td>
+<td class="col-plan"><i class="fa-solid fa-circle-check pricing-check"></i> Included BLE Sensors</td>
+</tr>
+<tr>
+<td><strong>Open REST API & Webhooks</strong></td>
+<td class="col-plan"><span class="pricing-dash">—</span></td>
+<td class="col-plan">Standard REST API</td>
+<td class="col-plan"><i class="fa-solid fa-circle-check pricing-check"></i> Full REST + Webhooks</td>
+</tr>
+<tr>
+<td><strong>Uptime SLA & Dedicated TAM</strong></td>
+<td class="col-plan">Standard Email/Chat</td>
+<td class="col-plan">24/7 Priority</td>
+<td class="col-plan"><span class="pricing-badge">99.99% SLA + TAM</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+<!-- QUANTIFIABLE ROI SECTION -->
 <section class="section">
 <div class="container">
-<div class="grid-3">
-<div class="feature-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
-<img src="images/Cloud SaaS.png" alt="Cloud SaaS" style="width: 100%; height: 180px; object-fit: cover; display: block; border-bottom: 1px solid var(--border);">
-<div style="padding: 30px; flex: 1;">
-<div class="feature-icon" style="margin-bottom: 15px;"><i class="fa-solid fa-cloud"></i></div>
-<h3>Cloud SaaS</h3>
-<p>Access the platform through modern desktop and mobile browsers without installing a dedicated fleet application.</p>
+<div class="section-title">
+<span class="eyebrow">Proven ROI</span>
+<h2>How FleetX pays for itself in the first 90 days.</h2>
+<p>
+Real-world operational savings reported across thousands of commercial vehicle deployments.
+</p>
 </div>
+<div class="roi-ledger">
+<div class="ledger-problem-card">
+<span class="eyebrow" style="margin-bottom: 12px; display: inline-block;">Hidden Cost Leaks</span>
+<h3>The cost of unmonitored fleets adds up daily.</h3>
+<p>Without high-precision telematics, commercial fleets silently bleed margins through invisible route and driver inefficiencies:</p>
+<ul class="cost-leak-list">
+<li><i class="fa-solid fa-circle-exclamation"></i> Up to 25% fuel wasted on unapproved detours &amp; excessive idling</li>
+<li><i class="fa-solid fa-circle-exclamation"></i> Premature brake and tire wear from chronic aggressive driving</li>
+<li><i class="fa-solid fa-circle-exclamation"></i> Severe billing write-offs from unverified customer detention disputes</li>
+<li><i class="fa-solid fa-circle-exclamation"></i> Catastrophic engine failures due to overlooked periodic service intervals</li>
+</ul>
 </div>
-<div class="feature-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
-<img src="images/Scale Easily.png" alt="Scale Easily" style="width: 100%; height: 180px; object-fit: cover; display: block; border-bottom: 1px solid var(--border);">
-<div style="padding: 30px; flex: 1;">
-<div class="feature-icon" style="margin-bottom: 15px;"><i class="fa-solid fa-arrow-up-right-dots"></i></div>
-<h3>Scale Easily</h3>
-<p>Expand vehicle coverage and platform capabilities as your operation grows from a small fleet to a larger network.</p>
+<div class="ledger-savings-grid">
+<div class="ledger-saving-box">
+<div class="ledger-badge">18% - 22%</div>
+<h4>Fuel Overhead Savings</h4>
+<p>Curtail unapproved off-route detours, curb speeding, and eliminate excessive vehicle idling.</p>
 </div>
+<div class="ledger-saving-box">
+<div class="ledger-badge">30%</div>
+<h4>Drop in Breakdowns</h4>
+<p>Automated maintenance triggers alert mechanics before minor faults turn into costly repairs.</p>
 </div>
-<div class="feature-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
-<img src="images/Fleet Support.png" alt="Fleet Support" style="width: 100%; height: 180px; object-fit: cover; display: block; border-bottom: 1px solid var(--border);">
-<div style="padding: 30px; flex: 1;">
-<div class="feature-icon" style="margin-bottom: 15px;"><i class="fa-solid fa-life-ring"></i></div>
-<h3>Fleet Support</h3>
-<p>Support onboarding, configuration and ongoing operational workflows around your telematics environment.</p>
+<div class="ledger-saving-box">
+<div class="ledger-badge">35%</div>
+<h4>Fewer Collision Claims</h4>
+<p>Proactive driver scorecards and defensive driving incentives directly reduce accident liability.</p>
+</div>
+<div class="ledger-saving-box">
+<div class="ledger-badge">45%</div>
+<h4>Faster Dispute Resolution</h4>
+<p>Verifiable GPS arrival timestamps and route playback resolve customer delivery disputes instantly.</p>
 </div>
 </div>
 </div>
 </div>
 </section>
+
+<!-- INFRASTRUCTURE PILLARS -->
+<section class="section" style="background: rgba(8,108,255,0.03);">
+<div class="container">
+<div class="grid-3">
+<div class="feature-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+<img src="images/Cloud SaaS.png" alt="Cloud SaaS" style="width: 100%; height: 180px; object-fit: cover; display: block; border-bottom: 1px solid var(--border);">
+<div style="padding: 24px; flex: 1; text-align: center;">
+<div class="feature-icon" style="margin: 0 auto 15px;"><i class="fa-solid fa-cloud"></i></div>
+<h3>Instant Cloud Access</h3>
+<p>Zero on-premises servers to maintain. Access your entire fleet from modern desktop browsers, tablets, and native mobile apps.</p>
+</div>
+</div>
+<div class="feature-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+<img src="images/Scale Easily.png" alt="Scale Easily" style="width: 100%; height: 180px; object-fit: cover; display: block; border-bottom: 1px solid var(--border);">
+<div style="padding: 24px; flex: 1; text-align: center;">
+<div class="feature-icon" style="margin: 0 auto 15px;"><i class="fa-solid fa-arrow-up-right-dots"></i></div>
+<h3>Elastic Scalability</h3>
+<p>Add 5 or 5,000 new vehicles effortlessly. Our cloud architecture scales compute power dynamically with zero downtime.</p>
+</div>
+</div>
+<div class="feature-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+<img src="images/Fleet Support.png" alt="Fleet Support" style="width: 100%; height: 180px; object-fit: cover; display: block; border-bottom: 1px solid var(--border);">
+<div style="padding: 24px; flex: 1; text-align: center;">
+<div class="feature-icon" style="margin: 0 auto 15px;"><i class="fa-solid fa-life-ring"></i></div>
+<h3>Dedicated Fleet Support</h3>
+<p>Expert onboarding, hardware installation coordination, driver coaching workshops, and ongoing optimization reviews.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- COMMERCIAL FLEXIBILITY -->
 <section class="section">
 <div class="container">
-<div class="grid-2">
+<div class="grid-2" style="align-items: center; gap: 48px;">
 <div class="big-image">
 <img
 src="images/Pricing that can evolve with your fleet.png"
@@ -243,40 +386,77 @@ decoding="async">
 Commercial Flexibility
 </span>
 <h2>
-Pricing that can evolve with your fleet.
+Commercial agreements designed around your operational growth.
 </h2>
 <p>
-Fleet requirements can change as vehicles, regions, teams and
-operational workflows expand. A flexible SaaS structure allows
-fleet managers to start with core visibility and add additional
-capabilities as their requirements develop.
+Fleet operations fluctuate with seasonal demand, client contracts, and vehicle replacements. FleetX provides flexible commercial options that ensure you never pay for idle hardware or deactivated vehicles.
 </p>
-<p>
-For enterprise deployments, pricing can be structured around fleet
-size, modules, integration requirements and support expectations.
-</p>
+<ul class="check-list" style="margin-top: 15px;">
+<li><i class="fa-solid fa-circle-check"></i> <strong>Month-to-month or annual:</strong> Choose annual billing for discounts or flexible monthly terms.</li>
+<li><i class="fa-solid fa-circle-check"></i> <strong>Bring your own device (BYOD):</strong> Compatible with major standard GPS and OBD-II tracker brands.</li>
+<li><i class="fa-solid fa-circle-check"></i> <strong>Volume discount tiers:</strong> Automatic price reductions for fleets exceeding 50, 200, and 500 units.</li>
+<li><i class="fa-solid fa-circle-check"></i> <strong>Seasonal asset pausing:</strong> Temporarily pause tracking subscriptions for vehicles in scheduled storage.</li>
+</ul>
+<div style="margin-top: 20px;">
 <button class="btn btn-primary" onclick="showPage('contact')">
-Discuss Requirements
+<i class="fa-solid fa-file-contract"></i> Discuss Custom Requirements
 </button>
+</div>
 </div>
 </div>
 </div>
 </section>
 
+<!-- PRICING FAQS -->
+<section class="section" style="background: rgba(8,108,255,0.03);">
+<div class="container" style="max-width: 820px;">
+<div class="section-title">
+<span class="eyebrow">Questions Answered</span>
+<h2>Frequently Asked Pricing Questions</h2>
+<p>Everything you need to know about contracts, hardware, and billing.</p>
+</div>
+<div class="faq-list">
+<details class="faq-item">
+<summary>Are GPS tracking devices included or can I use my existing trackers? <i class="fa-solid fa-chevron-down"></i></summary>
+<div class="faq-content">FleetX is hardware-agnostic. You can either purchase our certified plug-and-play OBD-II or hardwired 4G LTE units, or connect your existing AIS-140/commercial GPS tracking devices via our universal telematics gateway.</div>
+</details>
+<details class="faq-item">
+<summary>Can I upgrade or downgrade plans as our vehicle count changes? <i class="fa-solid fa-chevron-down"></i></summary>
+<div class="faq-content">Yes! You can add new vehicles, pause decommissioned assets, or upgrade from Starter to Professional at any time through your dashboard administrator console with prorated billing.</div>
+</details>
+<details class="faq-item">
+<summary>Do you offer discounts for annual billing or larger fleet sizes? <i class="fa-solid fa-chevron-down"></i></summary>
+<div class="faq-content">We offer up to a 20% discount on annual commitments, as well as specialized volume discount tiers for commercial fleets operating more than 50 vehicles. Contact our sales team for an exact custom quote.</div>
+</details>
+<details class="faq-item">
+<summary>Is there a setup or onboarding fee? <i class="fa-solid fa-chevron-down"></i></summary>
+<div class="faq-content">Standard cloud onboarding and self-service training are completely free. For large enterprise fleets requiring nationwide on-site technician installation or custom ERP API middleware, our Professional Services team provides transparent one-time deployment packages.</div>
+</details>
+<details class="faq-item">
+<summary>Can we test FleetX on a pilot group before signing? <i class="fa-solid fa-chevron-down"></i></summary>
+<div class="faq-content">Absolutely. We offer a 14-day zero-obligation pilot evaluation on up to 5 vehicles so your dispatch and management teams can verify tracking accuracy, fuel savings, and scorecard analytics firsthand.</div>
+</details>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
 <section class="section">
 <div class="container">
 <div class="emoji-panel">
-<div class="emoji">💡</div>
-<h2>
-Need a custom configuration?
-</h2>
-<p style="max-width:620px;margin:9px auto 19px;color:var(--muted);font-size:12px;">
-Tell us your vehicle count and operational requirements. The demo
-pricing can be adapted to your actual FleetX deployment model.
+<div class="cta-icon-badge"><i class="fa-solid fa-calculator"></i></div>
+<h2>Need a tailored deployment proposal?</h2>
+<p>
+Share your vehicle count, tracking priorities, and integration requirements. Our telematics specialists will construct an ROI-backed pricing proposal within 24 hours.
 </p>
+<div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
 <button class="btn btn-primary" onclick="showPage('contact')">
-Request Custom Quote
+<i class="fa-solid fa-paper-plane"></i> Request Custom Quote
 </button>
+<button class="btn btn-outline" onclick="showPage('dashboard')">
+<i class="fa-solid fa-chart-pie"></i> Try Interactive Demo
+</button>
+</div>
 </div>
 </div>
 </section>
