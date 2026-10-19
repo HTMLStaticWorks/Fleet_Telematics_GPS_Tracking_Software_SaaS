@@ -140,8 +140,8 @@ HOME 2 / PLATFORM
                         </button>
                     </div>
                 </div>
-                <div class="hero-visual-wrapper" style="display:flex; flex-direction:column; gap:24px; width:100%;">
-                    <div class="platform-hero-visual" style="background: url('images/home2-hero.png') center/cover no-repeat; min-height: 550px;">
+                <div class="hero-visual-wrapper" style="width:100%; position:relative;">
+                    <div class="platform-hero-visual" style="background: url('images/home2-hero.png') center/cover no-repeat; min-height: 520px; border-radius: 26px; border: 1px solid var(--border); box-shadow: var(--shadow); position: relative; overflow: hidden;">
                         <div class="platform-hero-overlay"></div>
                         <div class="hero-glass one">
                             <span class="glass-small">ACTIVE ROUTES</span>
@@ -151,22 +151,22 @@ HOME 2 / PLATFORM
                             <span class="glass-small">ALERT RESPONSE</span>
                             <span class="glass-value">94%</span>
                         </div>
-                    </div>
-                    <div class="telemetry-panel">
-                        <div class="telemetry-row">
-                            <div>
-                                <div class="telemetry-title">Live fleet telemetry</div>
-                                <div class="telemetry-value">1,284 vehicles connected</div>
+                        <div class="telemetry-panel" style="position: absolute; left: 24px; bottom: 24px; max-width: 320px; width: calc(100% - 48px); padding: 12px 16px; border-radius: 14px; background: rgba(5, 18, 31, 0.88); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.16); box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35); margin: 0;">
+                            <div class="telemetry-row" style="margin-bottom: 8px;">
+                                <div>
+                                    <div class="telemetry-title" style="font-size: 11px;">Live fleet telemetry</div>
+                                    <div class="telemetry-value" style="font-size: 16px;">1,284 vehicles connected</div>
+                                </div>
+                                <div class="command-live"><i></i> LIVE</div>
                             </div>
-                            <div class="command-live"><i></i> LIVE</div>
-                        </div>
-                        <div class="telemetry-bars" aria-hidden="true">
-                            <i style="height:42%"></i><i style="height:64%"></i><i style="height:51%"></i><i
-                                style="height:78%"></i><i style="height:57%"></i><i style="height:88%"></i><i
-                                style="height:69%"></i><i style="height:94%"></i><i style="height:73%"></i><i
-                                style="height:83%"></i><i style="height:61%"></i><i style="height:91%"></i><i
-                                style="height:76%"></i><i style="height:97%"></i><i style="height:70%"></i><i
-                                style="height:86%"></i><i style="height:66%"></i><i style="height:92%"></i>
+                            <div class="telemetry-bars" aria-hidden="true" style="height: 24px; gap: 3px;">
+                                <i style="height:42%"></i><i style="height:64%"></i><i style="height:51%"></i><i
+                                    style="height:78%"></i><i style="height:57%"></i><i style="height:88%"></i><i
+                                    style="height:69%"></i><i style="height:94%"></i><i style="height:73%"></i><i
+                                    style="height:83%"></i><i style="height:61%"></i><i style="height:91%"></i><i
+                                    style="height:76%"></i><i style="height:97%"></i><i style="height:70%"></i><i
+                                    style="height:86%"></i><i style="height:66%"></i><i style="height:92%"></i>
+                            </div>
                         </div>
                     </div>
                 </div>

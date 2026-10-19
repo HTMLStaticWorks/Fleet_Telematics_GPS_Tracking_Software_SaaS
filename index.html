@@ -12,6 +12,20 @@
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 <link rel="stylesheet" href="css/style.css">
+<style>
+  /* Force white paragraph text inside hero sections and dark banner (all modes) */
+  html body #home1 .hero-home1 p,
+  html body .hero-home1 p,
+  html body .dark-section p,
+  html body .dark-section .section-title p {
+    color: #ffffff !important;
+  }
+  html body .dark-section .eyebrow {
+    color: #5de9ff !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-color: rgba(93, 233, 255, 0.3) !important;
+  }
+</style>
 
 </head>
 <body>
@@ -108,7 +122,7 @@ HOME 1
 <section class="hero hero-home1" style="background: linear-gradient(180deg, rgba(6, 18, 34, 0.42) 0%, rgba(3, 10, 20, 0.58) 100%), url('https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=2400&q=90') center/cover no-repeat;">
 <div class="container">
 <div class="hero-copy" style="text-align: center; max-width: 800px; margin: 0 auto;">
-<span class="eyebrow" style="color: #05d7ff; border-color: rgba(255,255,255,0.2); background: rgba(255,255,255,0.1);">
+<span class="eyebrow" style="color: #ffffff; border-color: rgba(255,255,255,0.25); background: rgba(255,255,255,0.12);">
 <i class="fa-solid fa-satellite-dish"></i>
 Fleet Intelligence Platform
 </span>
@@ -117,7 +131,7 @@ Every vehicle.
 <br>
 <span>One clear view.</span>
 </h1>
-<p style="color: rgba(255,255,255,0.9);">
+<p style="color: rgba(255,255,255,0.9); text-align: center;">
 FleetX connects GPS tracking, driver behavior, fuel intelligence,
 maintenance, alerts and geofencing into one operational workspace
 for modern fleet managers.
@@ -511,7 +525,7 @@ Fleet Command
 <h2>
 From GPS signals to operational decisions.
 </h2>
-<p style="color:#9db4ca; font-size: 16px; max-width: 650px; margin: 10px auto 20px;">
+<p style="color: #ffffff !important; font-size: 16px; max-width: 650px; margin: 10px auto 20px; text-align: center;">
 FleetX connects location, driver behavior, fuel, maintenance and alerts
 into one continuously updated fleet intelligence layer.
 </p>

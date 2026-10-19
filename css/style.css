@@ -422,8 +422,31 @@ align-items:center;
   gap: 14px;
   flex-wrap: wrap;
 }
-#home1 .hero > .container, #home2 .hero > .container {
+#home1 .hero > .container {
 width:100%;
+}
+#home2 .hero > .container,
+.hero-home2 > .container {
+width: min(1200px, 92%);
+margin: 0 auto;
+padding: 0 20px;
+box-sizing: border-box;
+}
+#home2 .hero-copy,
+.hero-home2 .hero-copy {
+padding-left: 20px;
+box-sizing: border-box;
+}
+@media(max-width:1024px){
+  #home2 .hero-copy,
+  .hero-home2 .hero-copy {
+    padding-left: 0;
+  }
+}
+html[dir="rtl"] #home2 .hero-copy,
+html[dir="rtl"] .hero-home2 .hero-copy {
+  padding-left: 0;
+  padding-right: 20px;
 }
 .hero:before{
 content:"";
@@ -463,6 +486,9 @@ max-width:630px;
 color:var(--muted);
 font-size:18px;
 margin-bottom:23px;
+text-align:center;
+margin-left:auto;
+margin-right:auto;
 }
 .hero-buttons{
 display:flex;
@@ -1835,6 +1861,9 @@ display:flex;
 align-items:center;
 gap:9px;
 }
+.dash-user-mobile{
+display:none;
+}
 .avatar{
 width:38px;
 height:38px;
@@ -2281,6 +2310,25 @@ margin-right:auto;
 .hero-buttons{
 justify-content:center;
 }
+.about-story-grid{
+grid-template-columns:1fr !important;
+gap:36px !important;
+}
+.about-story-grid .big-image{
+max-width:720px;
+margin:0 auto;
+width:100%;
+}
+.about-story-grid .big-image img{
+width:100%;
+height:380px;
+object-fit:cover;
+}
+.about-story-grid .split{
+max-width:720px;
+margin:0 auto;
+width:100%;
+}
 }
 @media(max-width:900px){
 .contact-grid{
@@ -2325,6 +2373,37 @@ display:grid !important;
 }
 }
 @media(max-width:768px){
+.bento-header{
+flex-direction:column !important;
+align-items:flex-start !important;
+gap:10px !important;
+}
+.bento-tag,
+.bento-stat{
+white-space:nowrap !important;
+}
+.dash-top .dash-user{
+display:none !important;
+}
+.dash-user-mobile{
+display:flex !important;
+align-items:center;
+gap:12px;
+padding:10px 12px;
+border-radius:8px;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.1);
+}
+.dash-user-mobile .avatar{
+flex-shrink:0;
+}
+.dash-user-mobile .dash-user-info{
+min-width:0;
+text-align:left;
+}
+html[dir="rtl"] .dash-user-mobile .dash-user-info{
+text-align:right;
+}
 .grid-4, .dash-cards{
 grid-template-columns:1fr 1fr;
 }
@@ -3016,12 +3095,14 @@ FAQ SECTION
   background: rgba(22, 119, 255, 0.08);
   padding: 4px 10px;
   border-radius: 50px;
+  white-space: nowrap;
 }
 .bento-stat {
   font-family: "Manrope", sans-serif;
   font-size: 34px;
   font-weight: 900;
   color: var(--blue);
+  white-space: nowrap;
 }
 .bento-card h3 {
   font-family: "Manrope", sans-serif;
@@ -3725,6 +3806,18 @@ body:not(.dark) .eyebrow {
   border-color: rgba(22, 119, 255, 0.20) !important;
   color: var(--blue2) !important;
 }
+body .hero .eyebrow,
+body:not(.dark) .hero .eyebrow,
+body.dark .hero .eyebrow {
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+}
+body .hero .eyebrow i,
+body:not(.dark) .hero .eyebrow i,
+body.dark .hero .eyebrow i {
+  color: #ffffff !important;
+}
 body:not(.dark) .bento-tag,
 body:not(.dark) .roi-row-pill,
 body:not(.dark) .module-tag,
@@ -4203,4 +4296,34 @@ body:not(.dark) .faq-content,
 body:not(.dark) .ledger-problem-card p,
 body:not(.dark) .ledger-saving-box p {
   color: #475569 !important;
+}
+
+/* Force white paragraph text on hero sections with background images in light mode */
+body:not(.dark) .hero-home1 p,
+body:not(.dark) #home1 .hero p,
+body:not(.dark) .hero-about p,
+body:not(.dark) .hero-services p,
+body:not(.dark) .hero-features p,
+body:not(.dark) .hero-industries p,
+body:not(.dark) .hero-pricing p,
+body:not(.dark) .hero-contact p {
+  color: rgba(255, 255, 255, 0.92) !important;
+}
+
+/* Force bright text inside .dark-section in both light and dark modes */
+.dark-section p,
+.dark-section .section-title p,
+body:not(.dark) .dark-section p,
+body:not(.dark) .dark-section .section-title p,
+body.dark .dark-section p,
+body.dark .dark-section .section-title p {
+  color: #ffffff !important;
+}
+
+.dark-section .eyebrow,
+body:not(.dark) .dark-section .eyebrow,
+body.dark .dark-section .eyebrow {
+  color: #5de9ff !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(93, 233, 255, 0.3) !important;
 }

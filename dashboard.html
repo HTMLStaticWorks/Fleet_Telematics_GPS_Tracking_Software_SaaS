@@ -12,6 +12,35 @@
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 <link rel="stylesheet" href="css/style.css">
+<style>
+  .dash-user-mobile {
+    display: none;
+  }
+  @media (max-width: 768px) {
+    .dash-top .dash-user {
+      display: none !important;
+    }
+    .dash-user-mobile {
+      display: flex !important;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 12px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .dash-user-mobile .avatar {
+      flex-shrink: 0;
+    }
+    .dash-user-mobile .dash-user-info {
+      min-width: 0;
+      text-align: left;
+    }
+    html[dir="rtl"] .dash-user-mobile .dash-user-info {
+      text-align: right;
+    }
+  }
+</style>
 
 </head>
 <body>
@@ -66,6 +95,13 @@ Geofencing
 <button class="icon-btn rtl-control" onclick="toggleRTL()" title="RTL" aria-label="Toggle RTL" style="flex: 1; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #fff; background: rgba(255,255,255,0.05);">
 <i class="fa-solid fa-right-left"></i>
 </button>
+</div>
+<div class="dash-user-mobile">
+<div class="avatar" style="width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;display:grid;place-items:center;font-weight:900;font-size:14px;flex-shrink:0;">AM</div>
+<div class="dash-user-info" style="min-width:0;text-align:left;">
+<strong style="display:block;font-size:14px;font-weight:700;color:#fff;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Alex Morgan</strong>
+<span style="display:block;color:#8ca2b8;font-size:12px;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Fleet Operations Manager</span>
+</div>
 </div>
 <button onclick="showPage('home1')" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='rgba(255,255,255,0.05)'" style="width: 100%; display: flex; align-items: center; gap: 10px; padding: 12px; border-radius: 8px; background: rgba(255,255,255,0.05); color: #fff; border: 1px solid rgba(255,255,255,0.1); transition: 0.2s; cursor: pointer; font-size: 14px; font-family: inherit;">
 <i class="fa-solid fa-arrow-right-from-bracket"></i>
