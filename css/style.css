@@ -3806,17 +3806,46 @@ body:not(.dark) .eyebrow {
   border-color: rgba(22, 119, 255, 0.20) !important;
   color: var(--blue2) !important;
 }
-body .hero .eyebrow,
-body:not(.dark) .hero .eyebrow,
-body.dark .hero .eyebrow {
+body .hero:not(.hero-home2) .eyebrow,
+body:not(.dark) .hero:not(.hero-home2):not(#home2 .hero) .eyebrow,
+body.dark .hero:not(.hero-home2):not(#home2 .hero) .eyebrow {
   color: #ffffff !important;
   border-color: rgba(255, 255, 255, 0.3) !important;
   background: rgba(255, 255, 255, 0.12) !important;
 }
-body .hero .eyebrow i,
-body:not(.dark) .hero .eyebrow i,
-body.dark .hero .eyebrow i {
+body .hero:not(.hero-home2) .eyebrow i,
+body:not(.dark) .hero:not(.hero-home2):not(#home2 .hero) .eyebrow i,
+body.dark .hero:not(.hero-home2):not(#home2 .hero) .eyebrow i {
   color: #ffffff !important;
+}
+
+/* Home 2 Hero Eyebrow - Vibrant, high-contrast & bright in bright mode */
+body:not(.dark) .hero-home2 .eyebrow,
+body:not(.dark) #home2 .hero .eyebrow,
+.hero-home2 .eyebrow,
+#home2 .hero .eyebrow {
+  color: #086de5 !important;
+  background: rgba(22, 119, 255, 0.10) !important;
+  border: 1px solid rgba(22, 119, 255, 0.28) !important;
+  box-shadow: 0 2px 10px rgba(22, 119, 255, 0.10) !important;
+}
+body:not(.dark) .hero-home2 .eyebrow i,
+body:not(.dark) #home2 .hero .eyebrow i,
+.hero-home2 .eyebrow i,
+#home2 .hero .eyebrow i {
+  color: #086de5 !important;
+}
+
+body.dark .hero-home2 .eyebrow,
+body.dark #home2 .hero .eyebrow {
+  color: var(--cyan) !important;
+  background: rgba(22, 119, 255, 0.16) !important;
+  border: 1px solid rgba(0, 215, 255, 0.35) !important;
+  box-shadow: 0 0 16px rgba(0, 215, 255, 0.15) !important;
+}
+body.dark .hero-home2 .eyebrow i,
+body.dark #home2 .hero .eyebrow i {
+  color: var(--cyan) !important;
 }
 body:not(.dark) .bento-tag,
 body:not(.dark) .roi-row-pill,
